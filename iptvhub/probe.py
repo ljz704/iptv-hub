@@ -86,10 +86,74 @@ def classify_body(body: bytes) -> tuple[bool, str]:
     return True, "raw"      # 不确定时放行，交给播放器最终判定
 
 
+async def _verify_hls_segment(session, url: str) -> tuple[bool, str]:
+    """
+    HLS 深度验证：主列表 -> 取分片 -> 真实下载分片。
+
+    普通探测只看响应头，会漏掉"播放列表返回 200 但分片已删除(404)"的源。
+    实测 604 条里有 33 条属于这种情况。
+
+    @param session  aiohttp 会话
+    @param url      m3u8 地址
+    @retval         (是否可用, 说明)
+    """
+    from urllib.parse import urljoin
+
+    try:
+        async with session.get(url, timeout=aiohttp.ClientTimeout(total=10),
+                               ssl=False, allow_redirects=True) as r:
+            if r.status >= 400:
+                return False, f"HTTP {r.status}"
+            body = await r.content.read(16384)
+    except Exception as exc:
+        return False, type(exc).__name__
+
+    text = body.decode("utf-8", "ignore")
+    if "#EXTM3U" not in text and "#EXT-X-" not in text:
+        return False, "not-hls"
+
+    # 主列表：取第一个子列表
+    if "#EXT-X-STREAM-INF" in text:
+        sub = next((ln.strip() for ln in text.splitlines()
+                    if ln.strip() and not ln.startswith("#")), None)
+        if not sub:
+            return False, "no-variant"
+        try:
+            async with session.get(urljoin(url, sub),
+                                   timeout=aiohttp.ClientTimeout(total=10),
+                                   ssl=False) as r2:
+                if r2.status >= 400:
+                    return False, f"sub HTTP {r2.status}"
+                text = await r2.text(errors="ignore")
+        except Exception as exc:
+            return False, "sub-" + type(exc).__name__
+
+    seg = next((ln.strip() for ln in text.splitlines()
+                if ln.strip() and not ln.startswith("#")), None)
+    if not seg:
+        if "#EXT-X-TARGETDURATION" in text or "#EXTINF" in text:
+            return True, "live-ok"
+        return False, "no-segment"
+
+    try:
+        async with session.get(urljoin(url, seg),
+                               timeout=aiohttp.ClientTimeout(total=10),
+                               ssl=False) as r3:
+            if r3.status >= 400:
+                return False, f"seg HTTP {r3.status}"
+            chunk = await r3.content.read(2048)
+            if len(chunk) < 100:
+                return False, "seg-too-small"
+        return True, "deep-ok"
+    except Exception as exc:
+        return False, "seg-" + type(exc).__name__
+
+
 async def probe_one(session: aiohttp.ClientSession,
                     channel: Channel,
                     sem: asyncio.Semaphore,
-                    host_sems: dict) -> Channel | None:
+                    host_sems: dict,
+                    deep: bool = False) -> Channel | None:
     """
     探测单个频道源。
 
@@ -97,6 +161,7 @@ async def probe_one(session: aiohttp.ClientSession,
     @param channel   待探测频道
     @param sem       全局并发信号量
     @param host_sems 按域名的并发信号量字典
+    @param deep      True 时对 HLS 源做分片级深度验证
     @retval          存活则返回原对象（已填 latency_ms），否则 None
     """
     if UDP_RE.match(channel.url):
@@ -115,6 +180,15 @@ async def probe_one(session: aiohttp.ClientSession,
         t0 = time.perf_counter()
         for attempt in range(P.retries + 1):
             try:
+                # 深度模式：HLS 源走分片验证
+                if deep and ".m3u8" in channel.url.lower():
+                    ok, note = await _verify_hls_segment(session, channel.url)
+                    if ok:
+                        channel.latency_ms = int((time.perf_counter() - t0) * 1000)
+                        return channel
+                    log.debug("深度验证失败 [%s] %s", note, channel.name)
+                    return None
+
                 to = aiohttp.ClientTimeout(connect=P.timeout_connect,
                                            total=P.timeout_read)
                 async with session.get(channel.url, timeout=to,
@@ -140,12 +214,15 @@ async def probe_one(session: aiohttp.ClientSession,
 
 
 async def probe_all(channels: list[Channel],
-                    concurrency: int | None = None) -> list[Channel]:
+                    concurrency: int | None = None,
+                    deep: bool = False) -> list[Channel]:
     """
     并发探测全部频道，返回存活列表。
 
     @param channels     待探测列表
     @param concurrency  并发数，默认取配置
+    @param deep         True 时启用深度验证（下载真实分片），能筛掉"播放列表在
+                        但分片已删除"的假活源；代价是慢约 3 倍
     @retval             存活频道列表
     """
     conc = concurrency or P.concurrency
@@ -156,7 +233,7 @@ async def probe_all(channels: list[Channel],
     async with aiohttp.ClientSession(connector=conn,
                                      headers=CONFIG["headers"]) as s:
         results = await asyncio.gather(
-            *(probe_one(s, c, sem, host_sems) for c in channels),
+            *(probe_one(s, c, sem, host_sems, deep) for c in channels),
             return_exceptions=True)
 
     alive = [r for r in results if isinstance(r, Channel)]

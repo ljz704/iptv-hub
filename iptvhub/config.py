@@ -39,12 +39,33 @@ class Upstream:
 
 
 # 上游清单。URL 路径均已实测（2025），404 的已剔除。
-# 备注：iptv-org 仓库的 index.m3u / streams/cn_sichuan.m3u 均返回 404，
-#       有效路径只有 streams/*.m3u，新增上游前务必先 HEAD 验证。
+#
+# 踩坑记录：
+#   - iptv-org 的 index.m3u / streams/cn_sichuan.m3u 返回 404，有效路径只有 streams/*.m3u
+#   - best-fan/iptv-sources、jiandantv/IPTV2025 实测 404（仓库结构已变或已删）
+#   - 新增上游前务必先 HEAD 验证路径，别凭猜测写
+#
+# 实测规模（2025-10）：
+#   imDazui/Tvlist   1004 频道  央视 15/17  卫视 48   <- 规模最大
+#   vbskycn/iptv      544 频道  央视 17/17  卫视 37   <- 央视最全
+#   YueChan/Live       96 频道  央视 17/17  卫视 29
+#   iptv-org/cn       508 频道  央视 17/17  卫视 127
+#   gaotianliuyun/gao  TVBox 配置，二级订阅展开后贡献最多可用源
 UPSTREAMS: list[Upstream] = [
+    # --- 主力：规模大、央视全 ---
+    Upstream("imdazui-tvlist",
+             "https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/china.m3u",
+             "m3u", 1.0),
+    Upstream("vbskycn-iptv4",
+             "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+             "m3u", 0.95),
     Upstream("iptv-org-cn",
              "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
-             "m3u", 1.0),
+             "m3u", 0.9),
+    Upstream("yuechan-live",
+             "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
+             "m3u", 0.85),
+    # --- 港澳台与地区补充 ---
     Upstream("iptv-org-hk",
              "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/hk.m3u",
              "m3u", 0.7),
@@ -54,6 +75,7 @@ UPSTREAMS: list[Upstream] = [
     Upstream("iptv-org-mo",
              "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mo.m3u",
              "m3u", 0.5),
+    # --- TVBox 生态：二级订阅里有大量运营商优质源 ---
     Upstream("tvbox-gao",
              "https://raw.githubusercontent.com/gaotianliuyun/gao/master/0821.json",
              "tvbox", 0.9),

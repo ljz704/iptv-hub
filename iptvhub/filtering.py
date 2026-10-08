@@ -58,6 +58,27 @@ VOD_GROUP_RE = re.compile(
     r'演唱会|KTV|相声小品|短视频|油管|YouTube|抖音|影视$|电影$)',
     re.I)
 
+# 要整组剔除的分组（实测：这些不是电视频道）
+#   直播中国    = 风景摄像头直播，共 76 条
+#   数字/数字频道 = 无意义编号占位
+#   电台类      = 广播电台（初秋语•电台 / 范明明•电台），共 72 条
+DROP_GROUP_RE = re.compile(
+    r'(电台|直播中国|数字频道|^数字$)',
+    re.I)
+
+# 上游分组名不规范，归一到标准分组
+GROUP_NORMALIZE = {
+    '卫视频道': '卫视',
+    '央视频道': '央视',
+    '地方频道': '地方',
+    '电影频道': '影视',
+    '纪录频道': '纪录',
+    '儿童频道': '少儿',
+    '解说频道': '体育',
+    '春晚频道': '其他',
+    '数字频道': '其他',
+}
+
 # ---------------------------------------------------------------- 形态层
 _DASH = re.compile(r'[-－—]')
 
@@ -234,6 +255,20 @@ def filter_channels(channels: list,
     channels = [c for c in channels
                 if not (c.group and VOD_GROUP_RE.search(c.group))]
     audit["dropped_vod_group"] = before - len(channels)
+
+    # --- 第 3.5 级：非电视频道分组剔除（电台/风景直播/数字占位）---
+    before = len(channels)
+    channels = [c for c in channels
+                if not (c.group and DROP_GROUP_RE.search(c.group))]
+    audit["dropped_group"] = before - len(channels)
+
+    # --- 第 3.6 级：分组名规范化 ---
+    renamed = 0
+    for c in channels:
+        if c.group in GROUP_NORMALIZE:
+            c.group = GROUP_NORMALIZE[c.group]
+            renamed += 1
+    audit["group_renamed"] = renamed
 
     # --- 第 4 级：电台剔除 ---
     if drop_radio:

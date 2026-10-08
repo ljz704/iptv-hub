@@ -39,12 +39,14 @@ logging.basicConfig(
 log = logging.getLogger("cli")
 
 
-async def run(out_dir: str = "dist", do_probe: bool = True) -> int:
+async def run(out_dir: str = "dist", do_probe: bool = True,
+              deep: bool = False) -> int:
     """
     执行完整聚合流水线。
 
     @param out_dir   输出目录
     @param do_probe  是否做健康探测
+    @param deep      True 时启用深度验证（下载真实分片，慢但准）
     @retval          退出码，0 正常，1 告警
     """
     # ---- 1. 抓取 ----
@@ -133,10 +135,14 @@ async def run(out_dir: str = "dist", do_probe: bool = True) -> int:
     dropped_radio = audit.get("dropped_radio", 0)
     dropped_name = audit.get("dropped_by_name", 0)
     dropped_vod = audit.get("dropped_vod_group", 0)
+    dropped_grp = audit.get("dropped_group", 0)
+    renamed = audit.get("group_renamed", 0)
 
-    log.info("过滤：黑名单 %d ｜ 点播组 %d ｜ 电台 %d ｜ 脏名 %d ｜ 共 %d -> %d",
-             mb + blocked, dropped_vod, dropped_radio, dropped_name,
-             before_filter, len(channels))
+    log.info("过滤：黑名单 %d ｜ 点播组 %d ｜ 非电视组 %d ｜ 电台 %d ｜ 脏名 %d ｜ 共 %d -> %d",
+             mb + blocked, dropped_vod, dropped_grp, dropped_radio,
+             dropped_name, before_filter, len(channels))
+    if renamed:
+        log.info("分组规范化 %d 条", renamed)
 
     # 输出审计文件供排查
     if audit.get("host_stats"):
@@ -160,7 +166,7 @@ async def run(out_dir: str = "dist", do_probe: bool = True) -> int:
     # ---- 5. 探测 ----
     pre_probe = len(deduped)
     if do_probe:
-        deduped = await probe_all(deduped)
+        deduped = await probe_all(deduped, deep=deep)
     else:
         log.info("跳过探测（--no-probe）")
 
@@ -239,9 +245,11 @@ def main() -> None:
     ap = argparse.ArgumentParser(description="IPTV 源自动聚合")
     ap.add_argument("--out", default="dist", help="输出目录")
     ap.add_argument("--no-probe", action="store_true", help="跳过健康探测")
+    ap.add_argument("--deep", action="store_true",
+                    help="深度验证：下载真实分片，能筛掉假活源（慢约 3 倍）")
     args = ap.parse_args()
 
-    code = asyncio.run(run(args.out, not args.no_probe))
+    code = asyncio.run(run(args.out, not args.no_probe, args.deep))
     sys.exit(code)
 
 
