@@ -132,8 +132,11 @@ async def check(session, sem, name, url):
     async with sem:
         if is_m3u8(url):
             ok, note = await verify_m3u8(session, url)
-        elif url.startswith(('udp://', 'rtp://', 'igmp://')):
-            return name, url, True, 'multicast'
+        elif url.startswith(('udp://', 'rtp://', 'igmp://', 'rtp2://')):
+            # 组播源：需要运营商 IPTV 专网（光猫 IPTV 口 + VLAN），
+            # 普通宽带/WiFi 播放必然失败。实测列表里有 89 条，
+            # 留着只会让用户点了看不了，直接判定不可用。
+            return name, url, False, 'multicast'
         else:
             ok, note = await verify_ts(session, url)
         return name, url, ok, note

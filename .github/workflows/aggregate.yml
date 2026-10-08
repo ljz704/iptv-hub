@@ -46,14 +46,22 @@ jobs:
           if [ "${{ inputs.no_probe }}" = "true" ]; then
             python -m iptvhub.cli --out dist --no-probe
           else
-            python -m iptvhub.cli --out dist
+            # --deep: 下载真实分片验证，能筛掉"播放列表在但分片已删"的假活源
+            python -m iptvhub.cli --out dist --deep
           fi
         continue-on-error: true
 
+      - name: 重建 m3u（TVBox 故障转移格式）
+        run: |
+          # 关键：把同名频道重复列出，让 TVBox 能自动做故障转移。
+          # 不要用只有单个源 + 自定义 FALLBACK 标签的旧格式，
+          # TVBox 不认识该标签，主源挂了频道就彻底看不了。
+          python build_live_m3u.py
+
       - name: 重建 TVBox 配置
         run: |
-          # 上一步只产出裸配置，这一步补上实测可用的点播源与 spider 镜像，
-          # 并用 gh-proxy.com 替换不可达的 raw.githubusercontent.com 地址。
+          # 补上实测可用的点播源与 spider 镜像，
+          # 并把直播地址指向 live.m3u（而非 live_multi.m3u）。
           python build_tvbox_config.py
 
       - name: 统计结果

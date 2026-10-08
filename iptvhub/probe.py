@@ -153,19 +153,31 @@ async def probe_one(session: aiohttp.ClientSession,
                     channel: Channel,
                     sem: asyncio.Semaphore,
                     host_sems: dict,
-                    deep: bool = False) -> Channel | None:
+                    deep: bool = False,
+                    drop_multicast: bool = True) -> Channel | None:
     """
     探测单个频道源。
 
-    @param session   复用的 aiohttp 会话
-    @param channel   待探测频道
-    @param sem       全局并发信号量
-    @param host_sems 按域名的并发信号量字典
-    @param deep      True 时对 HLS 源做分片级深度验证
-    @retval          存活则返回原对象（已填 latency_ms），否则 None
+    @param session         复用的 aiohttp 会话
+    @param channel         待探测频道
+    @param sem             全局并发信号量
+    @param host_sems       按域名的并发信号量字典
+    @param deep            True 时对 HLS 源做分片级深度验证
+    @param drop_multicast  True 时剔除组播源
+    @retval                存活则返回原对象（已填 latency_ms），否则 None
+
+    关于组播：
+        udp:// rtp:// igmp:// 这类组播地址需要运营商的 IPTV 专网
+        （光猫的 IPTV 口 + VLAN），普通宽带/WiFi 播放必然失败。
+        实测当前列表里有 89 条组播源，留着只会让用户点了看不了，
+        所以默认剔除；需要时用 drop_multicast=False 保留。
     """
     if UDP_RE.match(channel.url):
-        channel.latency_ms = -2         # 组播：本地网络专用，不剔除
+        if drop_multicast:
+            channel.latency_ms = -2
+            log.debug("剔除组播源: %s -> %s", channel.name, channel.url)
+            return None
+        channel.latency_ms = -2
         return channel
 
     if is_private_host(channel.url):
@@ -215,15 +227,17 @@ async def probe_one(session: aiohttp.ClientSession,
 
 async def probe_all(channels: list[Channel],
                     concurrency: int | None = None,
-                    deep: bool = False) -> list[Channel]:
+                    deep: bool = False,
+                    drop_multicast: bool = True) -> list[Channel]:
     """
     并发探测全部频道，返回存活列表。
 
-    @param channels     待探测列表
-    @param concurrency  并发数，默认取配置
-    @param deep         True 时启用深度验证（下载真实分片），能筛掉"播放列表在
-                        但分片已删除"的假活源；代价是慢约 3 倍
-    @retval             存活频道列表
+    @param channels        待探测列表
+    @param concurrency     并发数，默认取配置
+    @param deep            True 时启用深度验证（下载真实分片），能筛掉"播放列表在
+                           但分片已删除"的假活源；代价是慢约 3 倍
+    @param drop_multicast  True 时剔除组播源（普通宽带播不了）
+    @retval                存活频道列表
     """
     conc = concurrency or P.concurrency
     sem = asyncio.Semaphore(conc)
@@ -233,9 +247,13 @@ async def probe_all(channels: list[Channel],
     async with aiohttp.ClientSession(connector=conn,
                                      headers=CONFIG["headers"]) as s:
         results = await asyncio.gather(
-            *(probe_one(s, c, sem, host_sems, deep) for c in channels),
+            *(probe_one(s, c, sem, host_sems, deep, drop_multicast)
+              for c in channels),
             return_exceptions=True)
 
     alive = [r for r in results if isinstance(r, Channel)]
-    log.info("探测完成: %d/%d 存活", len(alive), len(channels))
+    dropped_mc = sum(1 for c in channels if UDP_RE.match(c.url)) \
+        if drop_multicast else 0
+    log.info("探测完成: %d/%d 存活%s", len(alive), len(channels),
+             f"（剔除组播 {dropped_mc} 条）" if dropped_mc else "")
     return alive

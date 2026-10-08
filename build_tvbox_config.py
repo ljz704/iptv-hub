@@ -79,14 +79,19 @@ def main():
         merged.append(s)
 
     # 直播源地址：
-    #   本地部署用相对路径 ./live_multi.m3u 没问题，
-    #   但推送到 GitHub 后电视端拉的是远程配置，必须给绝对地址。
-    #   通过环境变量 LIVE_M3U_BASE 控制，默认走 GitHub raw 镜像。
+    #   本地部署用相对路径没问题，但推送到 GitHub 后电视端拉的是远程配置，
+    #   必须给绝对地址。通过环境变量 LIVE_M3U_BASE 控制。
+    #
+    # 重要：指向 live.m3u 而不是 live_multi.m3u。
+    #   live_multi.m3u 用自定义标签 #EXTM3U-FALLBACK 承载备用源，
+    #   但 TVBox 不认识该标签（标准播放器跳过未知的 # 行），
+    #   导致每个频道只有 1 个源、主源挂了就无法播放。
+    #   live.m3u 把同名频道重复列出，TVBox 会自行做故障转移。
     base = os.getenv(
         'LIVE_M3U_BASE',
         'https://gh-proxy.com/https://raw.githubusercontent.com/'
         'ljz704/iptv-hub/main/dist')
-    live_url = f"{base.rstrip('/')}/live_multi.m3u"
+    live_url = f"{base.rstrip('/')}/live.m3u"
 
     final = {
         "spider": SPIDER,
