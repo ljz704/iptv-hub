@@ -72,6 +72,20 @@
       "blocked": false
     },
     {
+      "host": "[2409:8087:8:21::18]:6610",
+      "count": 55,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "ali-m-l.cztv.com",
+      "count": 47,
+      "kw_ratio": 0.5957,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "39.134.67.108",
       "count": 47,
       "kw_ratio": 0.9149,
@@ -82,13 +96,6 @@
       "host": "[2409:8087:1a01:df::7005]:80",
       "count": 42,
       "kw_ratio": 0.8571,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "ali-m-l.cztv.com",
-      "count": 39,
-      "kw_ratio": 0.6154,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -219,6 +226,13 @@
       "blocked": false
     },
     {
+      "host": "livestream-bt.nmtv.cn",
+      "count": 13,
+      "kw_ratio": 0.6923,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "stream2.xiancity.cn",
       "count": 11,
       "kw_ratio": 0.5455,
@@ -275,6 +289,13 @@
       "blocked": false
     },
     {
+      "host": "0472.org",
+      "count": 10,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "stream5.jlntv.cn",
       "count": 10,
       "kw_ratio": 0.3,
@@ -327,27 +348,6 @@
       "host": "123.146.162.24:8017",
       "count": 9,
       "kw_ratio": 0.4444,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.appwuhan.com",
-      "count": 9,
-      "kw_ratio": 1.0,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "ksdlive.gwpd.iqilu.com",
-      "count": 9,
-      "kw_ratio": 0.5556,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "video.dztv.tv:1935",
-      "count": 9,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     }
