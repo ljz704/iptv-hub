@@ -1,0 +1,31 @@
+IPTV 配置地址清单（一个不通就换下一个）
+========================================================================
+
+【主配置】 tvbox.json   (直连，最快)
+    https://raw.githubusercontent.com/ljz704/iptv-hub/main/dist/tvbox.json
+
+【备用1】 tvbox-backup1.json   (镜像，稳定)
+    https://ghfast.top/https://raw.githubusercontent.com/ljz704/iptv-hub/main/dist/tvbox.json
+
+【备用2】 tvbox-backup2.json   (镜像，备用)
+    https://ghproxy.net/https://raw.githubusercontent.com/ljz704/iptv-hub/main/dist/tvbox.json
+
+【备用3】 tvbox-backup3.json   (CDN，较慢)
+    https://cdn.jsdelivr.net/gh/ljz704/iptv-hub@main/dist/tvbox.json
+
+------------------------------------------------------------------------
+只支持 m3u 的播放器，用这些地址：
+
+    https://raw.githubusercontent.com/ljz704/iptv-hub/main/dist/live.m3u
+
+    https://ghfast.top/https://raw.githubusercontent.com/ljz704/iptv-hub/main/dist/live.m3u
+
+    https://ghproxy.net/https://raw.githubusercontent.com/ljz704/iptv-hub/main/dist/live.m3u
+
+    https://cdn.jsdelivr.net/gh/ljz704/iptv-hub@main/dist/live.m3u
+
+------------------------------------------------------------------------
+排查建议：
+  1. 配置加载失败 → 换清单里的下一个地址
+  2. 全部不通 → 检查网络，或等 10 分钟重试（镜像会恢复）
+  3. 频道能加载但播放失败 → 是单个源的问题，不是配置问题

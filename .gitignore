@@ -27,3 +27,6 @@ apk/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# 本地导出包（用户自行生成，不需要入库）
+export/

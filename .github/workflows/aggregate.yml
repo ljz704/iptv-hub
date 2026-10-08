@@ -64,6 +64,12 @@ jobs:
           # 并把直播地址指向 live.m3u（而非 live_multi.m3u）。
           python build_tvbox_config.py
 
+      - name: 生成多镜像冗余配置
+        run: |
+          # 同一份配置生成 4 个镜像地址，某个镜像挂了可换下一个。
+          # 实测各镜像可用性随时变化（github.io 完全不通，raw 时通时不通）。
+          python build_redundant_config.py
+
       - name: 统计结果
         run: |
           echo "=== 输出文件 ==="
