@@ -1,0 +1,77 @@
+name: aggregate-tv-sources
+
+on:
+  schedule:
+    # 每 6 小时跑一次（UTC）
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      no_probe:
+        description: "跳过健康探测（快速预览）"
+        type: boolean
+        default: false
+
+# 允许 Action 提交结果
+permissions:
+  contents: write
+
+concurrency:
+  group: aggregate
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 运行聚合
+        env:
+          SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: |
+          if [ "${{ inputs.no_probe }}" = "true" ]; then
+            python -m iptvhub.cli --out dist --no-probe
+          else
+            python -m iptvhub.cli --out dist
+          fi
+        continue-on-error: true
+
+      - name: 统计结果
+        run: |
+          echo "=== 输出文件 ==="
+          ls -lh dist/ || true
+          echo "=== 频道统计 ==="
+          cat dist/stats.json 2>/dev/null || echo "无 stats.json"
+
+      - name: 提交更新
+        run: |
+          git config user.name  "tv-source-bot"
+          git config user.email "tv-source-bot@users.noreply.github.com"
+          git add dist/ data/history.jsonl 2>/dev/null || git add dist/
+          if git diff --staged --quiet; then
+            echo "无变更，跳过提交"
+          else
+            git commit -m "chore: 刷新直播源 $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
+
+      - name: 上传产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: tv-sources
+          path: dist/
+          retention-days: 7

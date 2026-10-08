@@ -1,0 +1,14 @@
+[
+  {
+    "name": "百度┃采集",
+    "interface": "https://api.apibdzy.com/api.php/provide/vod?ac=list/api.php/provide/vod/?ac=videolist&wd=%E5%BA%86%E4%BD%99%E5%B9%B4",
+    "count": 2,
+    "sample": "庆余年第一季特别版"
+  },
+  {
+    "name": "暴風┃采集",
+    "interface": "https://bfzyapi.com/api.php/provide/vod/api.php/provide/vod/?ac=videolist&wd=%E5%BA%86%E4%BD%99%E5%B9%B4",
+    "count": 10,
+    "sample": "庆余年 第一季"
+  }
+]

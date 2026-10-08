@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1020">
+<title>电视遥控 · 换源</title>
+<style>
+:root{--bg:#0b1020;--card:#161c33;--line:#252d4a;--fg:#e8ecf8;--dim:#8b95b5;
+      --acc:#4f8cff;--ok:#22c55e;--bad:#ef4444;--warn:#f59e0b}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,
+     BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;padding:12px 12px 40px}
+h1{font-size:19px;margin:6px 0 14px;display:flex;align-items:center;gap:8px}
+h1 small{font-size:12px;color:var(--dim);font-weight:400}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+      padding:14px;margin-bottom:12px}
+.card h2{font-size:14px;margin:0 0 10px;color:var(--dim);font-weight:600;
+         letter-spacing:.4px;text-transform:uppercase}
+.row{display:flex;gap:8px;align-items:center}
+.row+.row{margin-top:9px}
+input,button,select{font:inherit;border-radius:10px;border:1px solid var(--line);
+      background:#0e1428;color:var(--fg);padding:11px 13px;outline:none}
+input{flex:1;min-width:0}
+input:focus,select:focus{border-color:var(--acc)}
+button{background:var(--acc);border:none;color:#fff;font-weight:600;padding:11px 16px;
+       cursor:pointer;transition:.15s;white-space:nowrap}
+button:active{transform:scale(.97)}
+button.ghost{background:#1e2745;color:var(--fg)}
+button.sm{padding:7px 12px;font-size:13px}
+button:disabled{opacity:.5;cursor:not-allowed}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:8px}
+.stat{background:#0e1428;border-radius:10px;padding:10px;text-align:center}
+.stat b{display:block;font-size:20px;color:var(--acc)}
+.stat span{font-size:11px;color:var(--dim)}
+.chip{display:inline-block;padding:4px 10px;border-radius:99px;font-size:12px;
+      background:#0e1428;border:1px solid var(--line);margin:0 6px 6px 0;cursor:pointer}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+.chip.dead{opacity:.45;text-decoration:line-through}
+.ch{display:flex;justify-content:space-between;align-items:center;
+    padding:10px 12px;background:#0e1428;border-radius:10px;margin-bottom:6px;gap:8px}
+.ch .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ch .cnt{font-size:11px;color:var(--dim);background:#161c33;padding:2px 7px;border-radius:99px}
+.bar{height:3px;background:#0e1428;border-radius:99px;overflow:hidden;margin-top:10px}
+.bar>i{display:block;height:100%;background:var(--acc);width:0;transition:width .3s}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);
+       background:#fff;color:#0b1020;padding:11px 20px;border-radius:99px;font-size:14px;
+       font-weight:600;opacity:0;transition:.25s;pointer-events:none;max-width:88vw;
+       text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast.bad{background:var(--bad);color:#fff}
+.toast.good{background:var(--ok);color:#fff}
+.hint{font-size:12px;color:var(--dim);margin-top:8px;line-height:1.5}
+.tag{font-size:11px;padding:2px 8px;border-radius:99px;background:#0e1428;
+     border:1px solid var(--line);color:var(--dim)}
+.tag.live{background:rgba(34,197,94,.15);border-color:var(--ok);color:var(--ok)}
+.hide{display:none!important}
+</style>
+</head>
+<body>
+
+<h1>📺 电视遥控 <small id="host"></small></h1>
+
+<!-- 配对 -->
+<div class="card" id="pairCard">
+  <h2>设备配对</h2>
+  <div class="row">
+    <input id="pin" type="tel" inputmode="numeric" maxlength="6"
+           placeholder="输入电视上显示的 6 位配对码">
+    <button onclick="doPair()">连接</button>
+  </div>
+  <div class="hint">配对码在电视播放器「设置 → 远程控制」里查看</div>
+</div>
+
+<!-- 状态 -->
+<div class="card hide" id="statusCard">
+  <h2>当前状态</h2>
+  <div class="stats">
+    <div class="stat"><b id="sCh">-</b><span>频道数</span></div>
+    <div class="stat"><b id="sAlive">-</b><span>存活源</span></div>
+    <div class="stat"><b id="sNow">-</b><span>播放中</span></div>
+  </div>
+  <div class="bar"><i id="bar"></i></div>
+  <div class="hint" id="srcInfo">—</div>
+</div>
+
+<!-- 换源 -->
+<div class="card hide" id="srcCard">
+  <h2>切换订阅源</h2>
+  <div class="row">
+    <input id="srcUrl" placeholder="https://...  m3u / txt / tvbox.json">
+  </div>
+  <div class="row">
+    <button onclick="setSource()">应用此源</button>
+    <button class="ghost" onclick="refresh()">立即刷新</button>
+  </div>
+  <div class="row" id="srcChips"></div>
+</div>
+
+<!-- 频道 -->
+<div class="card hide" id="chCard">
+  <h2>频道 <span class="tag" id="chCount"></span></h2>
+  <div class="row">
+    <input id="q" placeholder="搜索频道，如 CCTV / 卫视" oninput="debouncedSearch()">
+  </div>
+  <div id="chList" style="margin-top:10px"></div>
+  <div class="row">
+    <button class="ghost sm" onclick="page(-1)">上一页</button>
+    <button class="ghost sm" onclick="page(1)">下一页</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+let TOKEN = localStorage.getItem('tv_token') || '';
+let state = { offset: 0, limit: 40, keyword: '' };
+
+/* ---------------- 基础 ---------------- */
+function toast(msg, kind) {
+  const t = $('#toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (kind ? ' ' + kind : '');
+  clearTimeout(t._h);
+  t._h = setTimeout(() => t.className = 'toast', 2200);
+}
+
+async function api(path, opts = {}) {
+  const headers = Object.assign({ 'Content-Type': 'application/json' }, opts.headers || {});
+  if (TOKEN) headers['X-Token'] = TOKEN;
+  const r = await fetch(path, Object.assign({}, opts, { headers }));
+  const j = await r.json().catch(() => ({ ok: false, error: '响应解析失败' }));
+  if (r.status === 401) {
+    TOKEN = '';
+    localStorage.removeItem('tv_token');
+    showPair();
+    throw new Error('登录已失效，请重新配对');
+  }
+  return j;
+}
+
+function showPair() {
+  $('#pairCard').classList.remove('hide');
+  $('#statusCard').classList.add('hide');
+  $('#srcCard').classList.add('hide');
+  $('#chCard').classList.add('hide');
+}
+
+function showAll() {
+  $('#pairCard').classList.add('hide');
+  $('#statusCard').classList.remove('hide');
+  $('#srcCard').classList.remove('hide');
+  $('#chCard').classList.remove('hide');
+}
+
+/* ---------------- 配对 ---------------- */
+async function doPair() {
+  const pin = $('#pin').value.trim();
+  if (pin.length !== 6) return toast('请输入 6 位配对码', 'bad');
+  try {
+    const j = await api('/api/pair', { method: 'POST', body: JSON.stringify({ pin }) });
+    if (!j.ok) return toast(j.error || '配对失败', 'bad');
+    TOKEN = j.token;
+    localStorage.setItem('tv_token', TOKEN);
+    toast('配对成功', 'good');
+    showAll();
+    loadAll();
+  } catch (e) { toast(e.message, 'bad'); }
+}
+
+/* ---------------- 状态 ---------------- */
+async function loadStatus() {
+  try {
+    const j = await api('/api/status');
+    if (!j.ok) return;
+    $('#sCh').textContent    = j.channels ?? '-';
+    $('#sAlive').textContent = j.alive ?? '-';
+    $('#sNow').textContent   = j.playing ? '▶' : '空闲';
+    const total = j.channels || 0, alive = j.alive || 0;
+    $('#bar').style.width = total ? (alive / total * 100).toFixed(1) + '%' : '0';
+    $('#srcInfo').textContent = j.source
+      ? `当前源：${j.source}　更新于 ${j.updated || '未知'}`
+      : '未设置源';
+  } catch (e) { /* 静默 */ }
+}
+
+async function loadSources() {
+  try {
+    const j = await api('/api/sources');
+    const box = $('#srcChips');
+    box.innerHTML = '';
+    (j.items || []).forEach(s => {
+      const el = document.createElement('span');
+      el.className = 'chip' + (s.active ? ' on' : '');
+      el.textContent = `${s.name || s.url}  ${s.alive ?? ''}`;
+      el.title = s.url;
+      el.onclick = () => { $('#srcUrl').value = s.url; setSource(); };
+      box.appendChild(el);
+    });
+  } catch (e) { /* 静默 */ }
+}
+
+/* ---------------- 换源 ---------------- */
+async function setSource() {
+  const url = $('#srcUrl').value.trim();
+  if (!url) return toast('请填写订阅地址', 'bad');
+  try {
+    const j = await api('/api/source', { method: 'POST', body: JSON.stringify({ url }) });
+    toast(j.ok ? '已切换订阅源' : (j.error || '切换失败'), j.ok ? 'good' : 'bad');
+    if (j.ok) setTimeout(() => { loadStatus(); loadSources(); }, 1200);
+  } catch (e) { toast(e.message, 'bad'); }
+}
+
+async function refresh() {
+  try {
+    const j = await api('/api/refresh', { method: 'POST' });
+    toast(j.ok ? '已触发刷新' : '刷新失败', j.ok ? 'good' : 'bad');
+    if (j.ok) setTimeout(loadStatus, 2000);
+  } catch (e) { toast(e.message, 'bad'); }
+}
+
+/* ---------------- 频道 ---------------- */
+let searchTimer = null;
+function debouncedSearch() {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => { state.offset = 0; loadChannels(); }, 350);
+}
+
+function page(dir) {
+  state.offset = Math.max(0, state.offset + dir * state.limit);
+  loadChannels();
+}
+
+async function loadChannels() {
+  try {
+    const qs = new URLSearchParams({
+      offset: state.offset, limit: state.limit, q: state.keyword
+    });
+    const j = await api('/api/channels?' + qs);
+    const box = $('#chList');
+    box.innerHTML = '';
+    const items = j.items || [];
+    $('#chCount').textContent = items.length + ' 项';
+
+    if (!items.length) {
+      box.innerHTML = '<div class="hint">没有匹配的频道</div>';
+      return;
+    }
+
+    items.forEach(c => {
+      const d = document.createElement('div');
+      d.className = 'ch';
+      d.innerHTML = `<span class="nm">${esc(c.name)}</span>
+                     <span class="cnt">${c.sources || 1} 源</span>
+                     <button class="sm">播放</button>`;
+      d.querySelector('button').onclick = () => play(c.name, 0);
+      box.appendChild(d);
+
+      // 有备用源时，列出可切换的源
+      if (c.sources > 1) {
+        const alt = document.createElement('div');
+        alt.style.cssText = 'margin:-2px 0 8px;padding-left:6px';
+        for (let i = 0; i < Math.min(c.sources, 5); i++) {
+          const tag = document.createElement('span');
+          tag.className = 'chip';
+          tag.textContent = i === 0 ? '主源' : `备用${i}`;
+          tag.onclick = () => play(c.name, i);
+          alt.appendChild(tag);
+        }
+        box.appendChild(alt);
+      }
+    });
+  } catch (e) { toast(e.message, 'bad'); }
+}
+
+async function play(name, index) {
+  try {
+    const j = await api('/api/play', {
+      method: 'POST', body: JSON.stringify({ name, index })
+    });
+    toast(j.ok ? `▶ ${name}${index ? ' (备用' + index + ')' : ''}`
+               : (j.error || '播放失败'), j.ok ? 'good' : 'bad');
+    if (j.ok) setTimeout(loadStatus, 800);
+  } catch (e) { toast(e.message, 'bad'); }
+}
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g,
+    c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+/* ---------------- 启动 ---------------- */
+function loadAll() { loadStatus(); loadSources(); loadChannels(); }
+
+$('#host').textContent = location.host;
+
+if (TOKEN) {
+  api('/api/status')
+    .then(() => { showAll(); loadAll(); })
+    .catch(() => showPair());
+} else {
+  showPair();
+}
+
+setInterval(() => { if (TOKEN) loadStatus(); }, 5000);
+</script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IPTV 播放测试台</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b1020;color:#e8ecf8;
+     font:14px/1.6 -apple-system,"Microsoft YaHei",sans-serif;
+     display:flex;height:100vh;overflow:hidden}
+#side{width:310px;flex:none;background:#12172b;border-right:1px solid #252d4a;
+      display:flex;flex-direction:column}
+#side h1{font-size:15px;margin:0;padding:14px;border-bottom:1px solid #252d4a}
+#tabs{display:flex;border-bottom:1px solid #252d4a}
+.tab{flex:1;text-align:center;padding:10px;cursor:pointer;font-size:13px;
+     color:#8b95b5;border-bottom:2px solid transparent}
+.tab.on{color:#4f8cff;border-bottom-color:#4f8cff;font-weight:700}
+#tools{padding:10px;border-bottom:1px solid #252d4a}
+#q{width:100%;background:#0e1428;border:1px solid #252d4a;color:#e8ecf8;
+   border-radius:8px;padding:8px 10px;outline:none}
+#list{flex:1;overflow-y:auto;padding:6px}
+.g{padding:8px 10px 4px;color:#6b7699;font-size:11px;font-weight:700;
+   text-transform:uppercase;letter-spacing:.5px}
+.ch{padding:8px 10px;border-radius:8px;cursor:pointer;display:flex;
+    justify-content:space-between;gap:8px;align-items:center}
+.ch:hover{background:#1b2340}
+.ch.on{background:#4f8cff;color:#fff}
+.ch .n{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ch .c{font-size:10px;background:#252d4a;padding:1px 6px;border-radius:99px;flex:none}
+.ch.on .c{background:rgba(255,255,255,.25)}
+#main{flex:1;display:flex;flex-direction:column;background:#000;min-width:0}
+video{flex:1;width:100%;background:#000;min-height:0}
+#bar{padding:10px 14px;background:#12172b;border-top:1px solid #252d4a;
+     display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+#now{flex:1;font-weight:600;min-width:100px;overflow:hidden;
+     text-overflow:ellipsis;white-space:nowrap}
+button{background:#4f8cff;border:none;color:#fff;padding:8px 14px;
+       border-radius:8px;cursor:pointer;font-weight:600;font-size:13px}
+button:active{transform:scale(.97)}
+button.g{background:#1e2745}
+#msg{font-size:12px;color:#8b95b5;padding:8px 14px;background:#12172b;
+     border-top:1px solid #252d4a;word-break:break-all;max-height:70px;overflow-y:auto}
+#alt{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11px;padding:3px 9px;border-radius:99px;background:#1e2745;
+     border:1px solid #252d4a;cursor:pointer;white-space:nowrap}
+.tag.on{background:#22c55e;border-color:#22c55e;color:#fff}
+.vodbox{padding:14px}
+.vodbox h3{margin:0 0 10px;font-size:14px;color:#4f8cff}
+.vodbox .row{padding:9px 11px;background:#0e1428;border-radius:9px;
+             margin-bottom:6px;display:flex;justify-content:space-between;
+             align-items:center;gap:8px}
+.vodbox .nm{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vodbox .badge{font-size:10px;padding:2px 7px;border-radius:99px;
+               background:#252d4a;color:#8b95b5}
+.notice{background:#1c2744;border:1px solid #2f3d63;border-radius:10px;
+        padding:12px;font-size:12px;color:#a8b3d4;line-height:1.7;margin-bottom:14px}
+.notice b{color:#4f8cff}
+.notice code{background:#0e1428;padding:1px 5px;border-radius:4px;color:#7dd3fc}
+</style>
+</head>
+<body>
+<div id="side">
+  <h1>📺 播放测试台</h1>
+  <div id="tabs">
+    <div class="tab on" data-t="live" onclick="switchTab('live')">直播</div>
+    <div class="tab" data-t="vod" onclick="switchTab('vod')">点播</div>
+  </div>
+  <div id="tools"><input id="q" placeholder="搜索频道" oninput="render()"></div>
+  <div id="list"></div>
+</div>
+<div id="main">
+  <video id="v" controls autoplay playsinline></video>
+  <div id="bar">
+    <span id="now">未选择频道</span>
+    <div id="alt"></div>
+    <button class="g" onclick="next(-1)">◀</button>
+    <button class="g" onclick="next(1)">▶</button>
+  </div>
+  <div id="msg">就绪 — 选择左侧频道开始播放</div>
+</div>
+
+<script>
+let CH = [], cur = null, flat = [], tab = 'live', VOD = [];
+
+document.getElementById('v').onerror = () =>
+  log('播放失败：' + (cur ? cur.name : '') + ' — 点备用源重试');
+function log(s) { document.getElementById('msg').textContent = s; }
+
+function switchTab(t) {
+  tab = t;
+  document.querySelectorAll('.tab').forEach(el =>
+    el.classList.toggle('on', el.dataset.t === t));
+  document.getElementById('tools').style.display = t === 'live' ? '' : 'none';
+  if (t === 'vod') renderVod(); else render();
+}
+
+/* ---------------- 直播 ---------------- */
+function render() {
+  if (tab !== 'live') return;
+  const kw = document.getElementById('q').value.trim().toLowerCase();
+  const box = document.getElementById('list');
+  box.innerHTML = ''; flat = [];
+  const groups = new Map();
+  for (const c of CH) {
+    if (kw && !c.name.toLowerCase().includes(kw)) continue;
+    if (!groups.has(c.group)) groups.set(c.group, []);
+    groups.get(c.group).push(c);
+  }
+  for (const [g, items] of groups) {
+    const h = document.createElement('div');
+    h.className = 'g'; h.textContent = g + ' (' + items.length + ')';
+    box.appendChild(h);
+    for (const c of items) {
+      flat.push(c);
+      const d = document.createElement('div');
+      d.className = 'ch' + (cur && cur.name === c.name ? ' on' : '');
+      d.innerHTML = '<span class="n">' + esc(c.name) + '</span>'
+                  + '<span class="c">' + c.urls.length + '</span>';
+      d.onclick = () => play(c, 0);
+      box.appendChild(d);
+    }
+  }
+}
+
+function esc(s){return String(s).replace(/[&<>"]/g,
+  c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+function play(c, idx) {
+  cur = c;
+  const url = c.urls[idx];
+  const v = document.getElementById('v');
+  v.src = url; v.play().catch(() => {});
+  document.getElementById('now').textContent = c.name;
+  log('▶ ' + c.name + '　源 ' + (idx+1) + '/' + c.urls.length + '　' + url.slice(0,80));
+  const alt = document.getElementById('alt'); alt.innerHTML = '';
+  if (c.urls.length > 1) {
+    c.urls.forEach((u, i) => {
+      const t = document.createElement('span');
+      t.className = 'tag' + (i === idx ? ' on' : '');
+      t.textContent = i === 0 ? '主源' : '备用' + i;
+      t.title = u; t.onclick = () => play(c, i);
+      alt.appendChild(t);
+    });
+  }
+  render();
+}
+
+function next(dir) {
+  if (!flat.length) return;
+  let i = cur ? flat.findIndex(c => c.name === cur.name) : -1;
+  i = (i + dir + flat.length) % flat.length;
+  play(flat[i], 0);
+}
+
+/* ---------------- 点播 ---------------- */
+function renderVod() {
+  const box = document.getElementById('list');
+  const searchable = VOD.filter(x => x.searchable).length;
+  box.innerHTML = `<div class="vodbox">
+    <div class="notice">
+      <b>点播源已就绪</b><br>
+      配置 <code>tvbox.json</code> 内含 <b>${VOD.length}</b> 个采集源，
+      其中可搜索 <b>${searchable}</b> 个。<br><br>
+      这些源需要 <b>spider 解析包</b>（已下载验证 577KB ✅）才能工作，
+      浏览器无法直接调用 —— 要真正搜剧，请把配置地址填进
+      <b>TVBox / 影视仓</b> App。
+    </div>
+    <h3>可用点播源（${VOD.length}）</h3>
+    ${VOD.map(s => `<div class="row">
+        <span class="nm">${esc(s.name)}</span>
+        <span class="badge">${s.searchable ? '可搜索' : '仅列表'}</span>
+      </div>`).join('')}
+  </div>`;
+}
+
+/* ---------------- 装载 ---------------- */
+Promise.all([
+  fetch('live_multi.m3u').then(r => r.text()),
+  fetch('tvbox.json').then(r => r.json()).catch(() => ({ sites: [] }))
+]).then(([m3u, cfg]) => {
+  VOD = cfg.sites || [];
+  let pending = null, fb = [];
+  for (const raw of m3u.split('\n')) {
+    const line = raw.trim();
+    if (!line) continue;
+    if (line.startsWith('#EXTM3U-FALLBACK:')) {
+      fb = line.slice(17).split('|').filter(Boolean); continue;
+    }
+    if (line.startsWith('#EXTINF')) {
+      const m = line.match(/group-title="([^"]*)"/);
+      pending = { name: line.slice(line.lastIndexOf(',')+1).trim(),
+                  group: m ? m[1] : '未分组', urls: [] };
+      continue;
+    }
+    if (line.startsWith('#')) continue;
+    if (pending) { pending.urls.push(line, ...fb); CH.push(pending); }
+    pending = null; fb = [];
+  }
+  render();
+  log('已加载 ' + CH.length + ' 个频道 / '
+      + CH.reduce((a,c)=>a+c.urls.length,0) + ' 个源；点播源 '
+      + VOD.length + ' 个');
+}).catch(e => log('加载失败：' + e.message + '（请用本地 HTTP 服务打开）'));
+</script>
+</body>
+</html>

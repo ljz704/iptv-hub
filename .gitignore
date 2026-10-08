@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 诊断与临时脚本（开发用，不入库）
+diag_*.py
+diag_*.txt
+verify_*.py
+probe_vod_sites.py
+dig_sites.py
+gen_sites_test.py
+
+# 大文件
+apk/
+*.apk
+*.zip
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# 系统
+Thumbs.db
+desktop.ini
+.DS_Store

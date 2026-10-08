@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>点播搜索 · 影视</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b1020;color:#e8ecf8;
+     font:14px/1.6 -apple-system,"Microsoft YaHei",sans-serif}
+header{padding:14px 18px;background:#12172b;border-bottom:1px solid #252d4a;
+       display:flex;gap:10px;align-items:center;position:sticky;top:0;z-index:10}
+header h1{font-size:16px;margin:0;white-space:nowrap}
+#q{flex:1;max-width:520px;background:#0e1428;border:1px solid #252d4a;
+   color:#e8ecf8;border-radius:10px;padding:10px 14px;outline:none;font:inherit}
+#q:focus{border-color:#4f8cff}
+button{background:#4f8cff;border:none;color:#fff;padding:10px 18px;
+       border-radius:10px;cursor:pointer;font-weight:600;font-size:14px}
+button:active{transform:scale(.97)}
+button.g{background:#1e2745}
+button:disabled{opacity:.5;cursor:not-allowed}
+#status{font-size:12px;color:#8b95b5;padding:10px 18px}
+#grid{padding:0 18px 24px;display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.card{background:#161c33;border:1px solid #252d4a;border-radius:12px;
+      overflow:hidden;cursor:pointer;transition:.15s}
+.card:hover{border-color:#4f8cff;transform:translateY(-2px)}
+.card .pic{width:100%;aspect-ratio:2/3;object-fit:cover;background:#0e1428;display:block}
+.card .ph{width:100%;aspect-ratio:2/3;background:#0e1428;display:flex;
+          align-items:center;justify-content:center;color:#3d4763;font-size:30px}
+.card .info{padding:8px 10px}
+.card .nm{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;
+          white-space:nowrap}
+.card .sub{font-size:11px;color:#8b95b5;overflow:hidden;text-overflow:ellipsis;
+           white-space:nowrap;margin-top:2px}
+.card .src{font-size:10px;color:#4f8cff;margin-top:4px}
+#detail{position:fixed;inset:0;background:rgba(6,9,20,.92);display:none;
+        overflow-y:auto;padding:20px;z-index:50}
+#detail.on{display:block}
+.dbox{max-width:900px;margin:0 auto;background:#12172b;border:1px solid #252d4a;
+      border-radius:14px;padding:20px}
+.dhead{display:flex;gap:16px;margin-bottom:16px}
+.dhead img{width:120px;border-radius:10px;flex:none}
+.dhead .meta{flex:1;min-width:0}
+.dhead h2{margin:0 0 8px;font-size:20px}
+.dhead p{margin:4px 0;color:#8b95b5;font-size:13px}
+.eps{margin-top:14px}
+.eps h3{font-size:14px;color:#4f8cff;margin:16px 0 8px}
+.eplist{display:flex;flex-wrap:wrap;gap:7px}
+.ep{padding:6px 12px;background:#0e1428;border:1px solid #252d4a;border-radius:8px;
+    font-size:12px;cursor:pointer;white-space:nowrap;max-width:180px;
+    overflow:hidden;text-overflow:ellipsis}
+.ep:hover{border-color:#4f8cff}
+.ep.on{background:#4f8cff;border-color:#4f8cff;color:#fff}
+#player{width:100%;max-height:62vh;background:#000;border-radius:10px;margin-top:14px}
+.notice{background:#1c2744;border:1px solid #2f3d63;border-radius:10px;
+        padding:11px 14px;font-size:12px;color:#a8b3d4;margin:0 18px 12px}
+.empty{color:#8b95b5;text-align:center;padding:60px 20px;font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎬 点播搜索</h1>
+  <input id="q" placeholder="输入剧名，如：庆余年 / 三体 / 漫长的季节" autofocus>
+  <button onclick="doSearch()">搜索</button>
+  <button class="g" onclick="loadSites()">源状态</button>
+</header>
+
+<div id="status">就绪 — 回车或点搜索开始</div>
+<div class="notice" id="notice" style="display:none"></div>
+<div id="grid"></div>
+
+<div id="detail">
+  <div class="dbox">
+    <button class="g" onclick="closeDetail()" style="margin-bottom:14px">← 返回</button>
+    <div class="dhead">
+      <img id="dPic" alt="">
+      <div class="meta">
+        <h2 id="dName">—</h2>
+        <p id="dMeta">—</p>
+        <p id="dRemarks"></p>
+      </div>
+    </div>
+    <video id="player" controls playsinline></video>
+    <div class="eps" id="eps"></div>
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+
+/* ---------------- 搜索 ---------------- */
+$('#q').addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+
+async function doSearch() {
+  const wd = $('#q').value.trim();
+  if (!wd) return;
+  $('#status').textContent = '搜索中…';
+  $('#grid').innerHTML = '';
+  $('#notice').style.display = 'none';
+
+  try {
+    const r = await fetch('/api/search?wd=' + encodeURIComponent(wd)).then(x => x.json());
+    if (r.error) { $('#status').textContent = '错误：' + r.error; return; }
+
+    $('#status').textContent =
+      `「${r.keyword}」命中 ${r.total} 部　|　${r.okSites}/${r.totalSites} 个源有结果`;
+
+    // 显示各源情况
+    const bad = (r.perSite || []).filter(s => !s.ok);
+    if (bad.length) {
+      $('#notice').style.display = '';
+      $('#notice').innerHTML = '部分源不可用：' +
+        bad.map(s => `${s.site}（${s.error}）`).join('、');
+    }
+
+    if (!r.items.length) {
+      $('#grid').innerHTML = '<div class="empty">没有找到结果，换个剧名试试</div>';
+      return;
+    }
+    renderGrid(r.items);
+  } catch (e) {
+    $('#status').textContent = '请求失败：' + e.message;
+  }
+}
+
+function renderGrid(items) {
+  const g = $('#grid');
+  g.innerHTML = '';
+  items.forEach(it => {
+    const c = document.createElement('div');
+    c.className = 'card';
+    const pic = it.pic
+      ? `<img class="pic" src="${esc(it.pic)}" loading="lazy"
+             onerror="this.outerHTML='<div class=\\'ph\\'>🎬</div>'">`
+      : '<div class="ph">🎬</div>';
+    c.innerHTML = `${pic}
+      <div class="info">
+        <div class="nm" title="${esc(it.name)}">${esc(it.name)}</div>
+        <div class="sub">${esc(it.remarks || it.year || '')}</div>
+        <div class="src">${esc((it.sources || []).join(' / '))}</div>
+      </div>`;
+    c.onclick = () => openDetail(it);
+    g.appendChild(c);
+  });
+}
+
+/* ---------------- 详情 ---------------- */
+async function openDetail(it) {
+  $('#detail').classList.add('on');
+  $('#dName').textContent = it.name;
+  $('#dMeta').textContent = [it.type, it.year, it.area].filter(Boolean).join(' · ');
+  $('#dRemarks').textContent = it.remarks || '';
+  $('#dPic').src = it.pic || '';
+  $('#dPic').style.display = it.pic ? '' : 'none';
+  $('#eps').innerHTML = '<p style="color:#8b95b5">正在获取剧集…</p>';
+  $('#player').src = '';
+
+  for (const site of (it.sources || [it.site])) {
+    try {
+      const d = await fetch(
+        `/api/detail?site=${encodeURIComponent(site)}&id=${encodeURIComponent(it.id)}`
+      ).then(x => x.json());
+      if (d.error) continue;
+      renderEps(d);
+      return;
+    } catch (e) { /* 换下一个源 */ }
+  }
+  $('#eps').innerHTML = '<p style="color:#ef4444">所有源都取不到剧集</p>';
+}
+
+function renderEps(d) {
+  const box = $('#eps');
+  box.innerHTML = '';
+  (d.episodes || []).forEach(g => {
+    const h = document.createElement('h3');
+    h.textContent = `${g.group}（${g.list.length} 集）`;
+    box.appendChild(h);
+    const wrap = document.createElement('div');
+    wrap.className = 'eplist';
+    g.list.forEach(ep => {
+      const e = document.createElement('div');
+      e.className = 'ep';
+      e.textContent = ep.name;
+      e.title = ep.url;
+      e.onclick = () => {
+        document.querySelectorAll('.ep').forEach(x => x.classList.remove('on'));
+        e.classList.add('on');
+        const v = $('#player');
+        v.src = ep.url;
+        v.play().catch(() => {});
+        v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      };
+      wrap.appendChild(e);
+    });
+    box.appendChild(wrap);
+  });
+  if (!box.innerHTML) box.innerHTML = '<p style="color:#ef4444">该源没有剧集数据</p>';
+}
+
+function closeDetail() {
+  $('#detail').classList.remove('on');
+  $('#player').pause();
+  $('#player').src = '';
+}
+
+/* ---------------- 源状态 ---------------- */
+async function loadSites() {
+  try {
+    const r = await fetch('/api/sites').then(x => x.json());
+    $('#status').textContent = '采集源：' +
+      r.sites.map(s => `${s.name}（${s.base}）`).join('　');
+  } catch (e) { $('#status').textContent = '获取失败：' + e.message; }
+}
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g,
+    c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// 打开即自动搜一个热剧，验证链路
+loadSites();
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-10-08T15:54:29.947652+00:00",
+  "total": 1143,
+  "alive": 360,
+  "alive_ratio": 0.315,
+  "per_upstream": {
+    "iptv-org-cn": {
+      "raw": 508,
+      "parsed": 508,
+      "alive": 106
+    },
+    "iptv-org-hk": {
+      "raw": 534,
+      "parsed": 26,
+      "alive": 6
+    },
+    "iptv-org-tw": {
+      "raw": 586,
+      "parsed": 52,
+      "alive": 6
+    },
+    "iptv-org-mo": {
+      "raw": 596,
+      "parsed": 10,
+      "alive": 0
+    },
+    "tvbox-gao": {
+      "raw": 610,
+      "parsed": 2978,
+      "alive": 242
+    }
+  },
+  "threshold": 0.35,
+  "healthy": false,
+  "total_raw": 1238
+}

@@ -1,0 +1,652 @@
+#EXTM3U
+#EXTINF:-1 tvg-name="余姚姚江文化" group-title="Ray•综合" source-count="2",余姚姚江文化
+#EXTM3U-FALLBACK:https://l.cztvcloud.com/channels/lantian/SXyuyao3/720p.m3u8
+http://l.cztvcloud.com/channels/lantian/SXyuyao3/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="浙江民生休闲" group-title="Ray•综合" source-count="1",浙江民生休闲
+http://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8
+#EXTINF:-1 tvg-name="平湖民生休闲" group-title="Ray•综合" source-count="1",平湖民生休闲
+http://l.cztvcloud.com/channels/lantian/SXpinghu2/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="数码时代" group-title="Ray•综合" source-count="1",数码时代
+http://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8
+#EXTINF:-1 tvg-name="余杭未来E频道" group-title="Ray•综合" source-count="1",余杭未来E频道
+http://l.cztvcloud.com/channels/lantian/SXyuhang3/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="上虞新商都" group-title="Ray•综合" source-count="1",上虞新商都
+http://l.cztvcloud.com/channels/lantian/SXshangyu3/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="CCTV" group-title="YueChan•综合" source-count="2" tvg-id="85" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-4K.png",CCTV
+#EXTM3U-FALLBACK:http://192.151.150.154/live/cctv8k.m3u8
+rtp://239.3.1.245:2000
+#EXTINF:-1 tvg-name="睛彩竞技" group-title="YueChan•综合" source-count="1" tvg-id="66" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/QiTa/CBC_JingCaiJingJi.png",睛彩竞技
+rtp://239.3.1.125:8001
+#EXTINF:-1 tvg-name="睛彩青少" group-title="YueChan•综合" source-count="1" tvg-id="68" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/QiTa/CBC_JingCaiQingShao.png",睛彩青少
+rtp://239.3.1.127:8001
+#EXTINF:-1 tvg-name="北京文艺" group-title="YueChan•综合" source-count="1" tvg-id="22" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/BRTV/BRTV_WenYi.png",北京文艺
+rtp://239.3.1.242:8000
+#EXTINF:-1 tvg-name="中国教育" group-title="YueChan•综合" source-count="1" tvg-id="76" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/QiTa/CETV-1.png",中国教育
+rtp://239.3.1.57:8152
+#EXTINF:-1 tvg-name="中国交通" group-title="YueChan•综合" source-count="1" tvg-id="79" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/QiTa/ZhongGuoJiaoTong.png",中国交通
+rtp://239.3.1.188:8001
+#EXTINF:-1 tvg-name="中国天气" group-title="YueChan•综合" source-count="1" tvg-id="322",中国天气
+rtp://239.3.1.108:8001
+#EXTINF:-1 tvg-name="四海钓鱼" group-title="YueChan•综合" source-count="1" tvg-id="320",四海钓鱼
+rtp://239.3.1.164:8001
+#EXTINF:-1 tvg-name="环球旅游" group-title="YueChan•综合" source-count="1" tvg-id="323",环球旅游
+rtp://239.3.1.109:8001
+#EXTINF:-1 tvg-name="睛彩广场舞" group-title="YueChan•综合" source-count="1" tvg-id="69" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/QiTa/CBC_JingCaiGuangChangWu.png",睛彩广场舞
+rtp://239.3.1.128:8001
+#EXTINF:-1 tvg-name="爱上" group-title="YueChan•综合" source-count="1" tvg-id="401" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/QiTa/AiShang4K.png",爱上
+rtp://239.3.1.236:2000
+#EXTINF:-1 tvg-name="精选" group-title="YueChan•综合" source-count="1" tvg-id="358",精选
+rtp://239.3.1.74:4120
+#EXTINF:-1 tvg-name="星影" group-title="YueChan•综合" source-count="1" tvg-id="378",星影
+rtp://239.3.1.94:4120
+#EXTINF:-1 tvg-name="光影" group-title="YueChan•综合" source-count="1" tvg-id="368",光影
+rtp://239.3.1.84:4120
+#EXTINF:-1 tvg-name="重温经典" group-title="YueChan•综合" source-count="1" tvg-id="349",重温经典
+rtp://239.3.1.25:8001
+#EXTINF:-1 tvg-name="魅力时尚" group-title="YueChan•综合" source-count="1" tvg-id="204",魅力时尚
+rtp://239.3.1.196:9012
+#EXTINF:-1 tvg-name="睛彩篮球" group-title="体育" source-count="1" tvg-id="67" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/QiTa/CBC_JingCaiLanQiu.png",睛彩篮球
+rtp://239.3.1.126:8001
+#EXTINF:-1 tvg-name="体育休闲" group-title="体育" source-count="1" tvg-id="26" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/BRTV/BRTV_TiYuXiuXian.png",体育休闲
+rtp://239.3.1.243:8000
+#EXTINF:-1 tvg-name="CHAOZHOUPUBLICCHANNEL" group-title="其他" source-count="1" tvg-id="ChaozhouPublicChannel.cn@SD",CHAOZHOUPUBLICCHANNEL
+http://113.64.146.48:1688/hls/4/index.m3u8
+#EXTINF:-1 tvg-name="KANGBATV" group-title="其他" source-count="1" tvg-id="KangbaTV.cn@SD",KANGBATV
+http://110.185.237.164:8888/hls/30/index.m3u8
+#EXTINF:-1 tvg-name="萬州三峽移民" group-title="其他" source-count="1",萬州三峽移民
+http://123.146.162.24:8017/c2F0hmi/1000/live.m3u8
+#EXTINF:-1 tvg-name="QTV-5" group-title="其他" source-count="1" tvg-id="QTV5.cn@SD",QTV-5
+http://video10.qtv.com.cn/drm/qtv5at/manifest.m3u8
+#EXTINF:-1 tvg-name="宿州科教NOT24/7" group-title="其他" source-count="1",宿州科教NOT24/7
+http://live.ahsz.tv/video/s10001-kxjy/index.m3u8
+#EXTINF:-1 tvg-name="湘潭公共" group-title="其他" source-count="1",湘潭公共
+http://live.hnxttv.com:9601/live/dspd/800K/tzwj_video.m3u8
+#EXTINF:-1 tvg-name="浙江I绍兴综合" group-title="其他" source-count="1",浙江I绍兴综合
+http://live.shaoxing.com.cn/video/s10001-sxtv1/index.m3u8
+#EXTINF:-1 tvg-name="QTV-6" group-title="其他" source-count="1" tvg-id="QTV6.cn@SD",QTV-6
+http://video10.qtv.com.cn/drm/qtv6at/manifest.m3u8
+#EXTINF:-1 tvg-name="浙江教科" group-title="其他" source-count="1",浙江教科
+https://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8
+#EXTINF:-1 tvg-name="浙江民生" group-title="其他" source-count="1",浙江民生
+https://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8
+#EXTINF:-1 tvg-name="XINJIANGTV2" group-title="其他" source-count="2" tvg-id="XinjiangTV2.cn@SD",XINJIANGTV2
+#EXTM3U-FALLBACK:https://hls.quklive.com/live/play-sh-21.quklive.com/1777511615189085.m3u8?auth_key=2092871636-a39d8614688744d0b170b856b086ba80-0-33900446b83fa0b5befeb6bedbcd51a0
+http://110.153.180.106:55555/out_3/index.m3u8
+#EXTINF:-1 tvg-name="XINJIANGTV3" group-title="其他" source-count="4" tvg-id="XinjiangTV3.cn@SD",XINJIANGTV3
+#EXTM3U-FALLBACK:http://120.70.60.179:9901/tsfile/live/1006_1.m3u8?authid=0&key=txiptv&playlive=1|http://110.153.180.106:55555/out_2/index.m3u8|https://st-video.xjmty.com/fs/livedit/e55abfa37af26e19/8ce9971c2177b3dd.m3u8
+http://218.84.35.38:3000/m3u8/live/tctv-2/index.m3u8
+#EXTINF:-1 tvg-name="广东I韶关综合台NOT24/7" group-title="其他" source-count="1",广东I韶关综合台NOT24/7
+https://www.sgmsw.cn/videos/tv/201805/1308/SB05RIYZOU8JR418AUQOF62CAJQ08D0E/hls/live.m3u8
+#EXTINF:-1 tvg-name="岳阳公共" group-title="其他" source-count="1",岳阳公共
+http://live.hnxttv.com:9601/live/dspd/800K/tzwj_video.m3u8?BVUUID=C236454D-5355-2F5F-FA96-1887C72E55CE&auth=654837809071524@615@2E9A5FD0B225B012E3178551CF3754A8
+#EXTINF:-1 tvg-name="嵊州综合NOT24/7" group-title="其他" source-count="1",嵊州综合NOT24/7
+https://l.cztvcloud.com/channels/lantian/SXshengzhou1/720p.m3u8
+#EXTINF:-1 tvg-name="浙江钱江" group-title="其他" source-count="1",浙江钱江
+https://ali-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8
+#EXTINF:-1 tvg-name="XINJIANGTV8" group-title="其他" source-count="1" tvg-id="XinjiangTV8.cn@SD",XINJIANGTV8
+http://120.70.60.179:9901/tsfile/live/1002_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-name="宿州公共NOT24/7" group-title="其他" source-count="1",宿州公共NOT24/7
+http://live.ahsz.tv/video/s10001-ggpd/index.m3u8
+#EXTINF:-1 tvg-name="河源综合" group-title="其他" source-count="1",河源综合
+https://tmpstream.hyrtv.cn/xwzh/sd/live.m3u8
+#EXTINF:-1 tvg-name="荣昌综合NOT24/7" group-title="其他" source-count="1",荣昌综合NOT24/7
+http://183.64.181.25:40023/rongchang01.m3u8
+#EXTINF:-1 tvg-name="餘姚姚江文化NOT24/7" group-title="其他" source-count="1",餘姚姚江文化NOT24/7
+https://l.cztvcloud.com/channels/lantian/SXyuyao2/720p.m3u8
+#EXTINF:-1 tvg-name="新昌新聞綜合NOT24/7" group-title="其他" source-count="1",新昌新聞綜合NOT24/7
+https://l.cztvcloud.com/channels/lantian/SXxinchang1/720p.m3u8
+#EXTINF:-1 tvg-name="XIZANGTVCHINESE" group-title="其他" source-count="1" tvg-id="XizangTVChinese.cn@SD",XIZANGTVCHINESE
+https://pili-live-hls-zdzz-tv.zzxwcm.cn/zdzz-tv/nqzh.m3u8
+#EXTINF:-1 tvg-name="广东I韶关公共台NOT24/7" group-title="其他" source-count="1",广东I韶关公共台NOT24/7
+https://www.sgmsw.cn/videos/tv/201805/1308/9P424TC5M000AFO13CXK6GN6BOA889D2/hls/live.m3u8
+#EXTINF:-1 tvg-name="集安综合" group-title="其他" source-count="1",集安综合
+https://stream2.jlntv.cn/ja/sd/live.m3u8
+#EXTINF:-1 tvg-name="长春综合" group-title="其他" source-count="1",长春综合
+https://stream2.jlntv.cn/jlcc/sd/live.m3u8
+#EXTINF:-1 tvg-name="ANDOTV" group-title="其他" source-count="1" tvg-id="AndoTV.cn@SD",ANDOTV
+http://play.kankanlive.com/live/1711956137852982.m3u8
+#EXTINF:-1 tvg-name="前郭综合" group-title="其他" source-count="1",前郭综合
+https://stream2.jlntv.cn/qg/sd/live.m3u8
+#EXTINF:-1 tvg-name="兴隆综合" group-title="其他" source-count="1",兴隆综合
+https://jwcdnqx.hebyun.com.cn/live/xlzh/1500k/tzwj_video.m3u8
+#EXTINF:-1 tvg-name="ANHUITV" group-title="其他" source-count="1" tvg-id="AnhuiTV.cn@SD",ANHUITV
+https://restream.pdtvhd.com/memfs/c1cd2ed0-3b2b-4c25-af98-a7fb0b1eb130.m3u8
+#EXTINF:-1 tvg-name="CHINATRAVEL" group-title="其他" source-count="1" tvg-id="ChinaTravel.cn@SD",CHINATRAVEL
+https://fastlive.cctvplus.com/out/v1/ca6f9297b7314a63959435028af287fc/index.m3u8
+#EXTINF:-1 tvg-name="CNDFILMMIDDLESCHOOLCHANNEL" group-title="其他" source-count="1" tvg-id="CNDFilmMiddleSchoolChannel.cn@SD",CNDFILMMIDDLESCHOOLCHANNEL
+http://live-play.zxstv.com.cn/zhongxuesheng/zhongxuesheng.m3u8
+#EXTINF:-1 tvg-name="QINGHAITV" group-title="其他" source-count="1" tvg-id="QinghaiTV.cn@SD",QINGHAITV
+https://hls-qhmh.lanzhousobey.cn/qhmh/mhds.m3u8
+#EXTINF:-1 tvg-name="HEBEITV" group-title="其他" source-count="2" tvg-id="HebeiTV.cn@SD",HEBEITV
+#EXTM3U-FALLBACK:https://restream.pdtvhd.com/memfs/1db8c005-9365-4b32-94a4-3736987b5646.m3u8
+https://event.pull.hebtv.com/live/live101.m3u8
+#EXTINF:-1 tvg-name="BREADTV面包台" group-title="其他" source-count="1" tvg-id="BreadTV.cn@SD",BREADTV面包台
+https://video.bread-tv.com:8091/hls-live24/online/index.m3u8
+#EXTINF:-1 tvg-name="HARBINMOVIECHANNEL" group-title="其他" source-count="1" tvg-id="HarbinMovieChannel.cn@SD",HARBINMOVIECHANNEL
+https://stream.hrbtv.net/yspd/playlist.m3u8
+#EXTINF:-1 tvg-name="QTV-2" group-title="其他" source-count="1" tvg-id="QTV2.cn@SD",QTV-2
+http://video10.qtv.com.cn/drm/qtv2at/manifest.m3u8
+#EXTINF:-1 tvg-name="QTV-4" group-title="其他" source-count="1" tvg-id="QTV4.cn@SD",QTV-4
+http://video10.qtv.com.cn/drm/qtv4at/manifest.m3u8
+#EXTINF:-1 tvg-name="QTV-3" group-title="其他" source-count="1" tvg-id="QTV3.cn@SD",QTV-3
+http://video10.qtv.com.cn/drm/qtv3at/manifest.m3u8
+#EXTINF:-1 tvg-name="SIPINGTV" group-title="其他" source-count="1" tvg-id="SipingTV.cn@SD",SIPINGTV
+http://stream2.jlntv.cn/sptv/sd/live.m3u8?_upt=f27750421743154598
+#EXTINF:-1 tvg-name="QTV-1" group-title="其他" source-count="1" tvg-id="QTV1.cn@SD",QTV-1
+http://video10.qtv.com.cn/drm/qtv1at/manifest.m3u8
+#EXTINF:-1 tvg-name="上虞3新商都NOT24/7" group-title="其他" source-count="1",上虞3新商都NOT24/7
+https://l.cztvcloud.com/channels/lantian/SXshangyu3/720p.m3u8
+#EXTINF:-1 tvg-name="上虞經濟文化NOT24/7" group-title="其他" source-count="1",上虞經濟文化NOT24/7
+https://l.cztvcloud.com/channels/lantian/SXshangyu2/720p.m3u8
+#EXTINF:-1 tvg-name="ZHEJIANGTVINTERNATIONAL" group-title="其他" source-count="1" tvg-id="ZhejiangInternationalChannel.cn@SD",ZHEJIANGTVINTERNATIONAL
+https://ali-m-l.cztv.com/channels/lantian/channel10/1080p.m3u8
+#EXTINF:-1 tvg-name="GUANGZHOUTV" group-title="其他" source-count="1" tvg-id="GuangzhouTV.cn@SD",GUANGZHOUTV
+https://tencentplaybusiness.gztv.com/live/zonghes.m3u8
+#EXTINF:-1 tvg-name="VOA美国之音" group-title="其他" source-count="1" tvg-id="VoATVChina.cn@SD",VOA美国之音
+https://voa-ingest.akamaized.net/hls/live/2033878/tvmc08/playlist.m3u8
+#EXTINF:-1 tvg-name="DRAGONTVINTERNATIONAL" group-title="其他" source-count="1" tvg-id="DragonTVInternational.cn@SD",DRAGONTVINTERNATIONAL
+https://restream.pdtvhd.com/memfs/0b1b95c9-3543-4af9-9fdb-cf45f1602f17.m3u8
+#EXTINF:-1 tvg-name="CELESTIALMOVIES576I" group-title="其他" source-count="1" tvg-id="CelestialMovies.hk@SD",CELESTIALMOVIES576I
+http://103.58.160.157:8278/720-CELESTIALMOVIES/playlist.m3u8
+#EXTINF:-1 tvg-name="ASIANDRAMA" group-title="其他" source-count="1" tvg-id="AsianDrama.hk@SD",ASIANDRAMA
+http://103.172.187.30:12000/stream/mytv/null-11/master.m3u8
+#EXTINF:-1 tvg-name="JADE" group-title="其他" source-count="1" tvg-id="Jade.hk@SD",JADE
+http://103.172.187.30:12000/stream/mytv/null-1/master.m3u8
+#EXTINF:-1 tvg-name="GOLDENJADE" group-title="其他" source-count="1" tvg-id="GoldenJade.hk@SD",GOLDENJADE
+http://103.172.187.30:12000/stream/mytv/null-12/master.m3u8
+#EXTINF:-1 tvg-name="BEAUTIFULLIFETV" group-title="其他" source-count="1" tvg-id="BeautifulLifeTV.tw@SD",BEAUTIFULLIFETV
+https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/playlist.m3u8
+#EXTINF:-1 tvg-name="唯心電視" group-title="其他" source-count="1" tvg-id="WXTV.tw@SD",唯心電視
+https://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w1177047531.m3u8
+#EXTINF:-1 tvg-name="CGNTVCHINESE" group-title="其他" source-count="1" tvg-id="CGNTVChinese.tw@SD",CGNTVCHINESE
+https://d3e05csss9c272.cloudfront.net/out/v1/f0bf71c57581470fb9379f603e8f5d83/CGNWebLiveCN.m3u8
+#EXTINF:-1 tvg-name="TAIWANINDIGENOUSTV" group-title="其他" source-count="1" tvg-id="TaiwanIndigenousTV.tw@SD",TAIWANINDIGENOUSTV
+https://streamipcfapp.akamaized.net/live/_definst_/live_720/key_b1500.m3u8
+#EXTINF:-1 tvg-name="MEIAHMOVIECHANNEL" group-title="其他" source-count="2" tvg-id="MeiAhMovieChannel.hk@SD",MEIAHMOVIECHANNEL
+#EXTM3U-FALLBACK:http://103.172.187.30:12000/stream/mytv/null-9/master.m3u8
+http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8
+#EXTINF:-1 tvg-name="DALITV大立電視台" group-title="其他" source-count="1" tvg-id="DaliTV.tw@SD",DALITV大立電視台
+http://www.dalitv.com.tw:4568/live/dali/index.m3u8
+#EXTINF:-1 tvg-name="郑州活力944" group-title="初秋语•电台" source-count="1",郑州活力944
+http://ls.qingting.fm/live/4921.m3u8
+#EXTINF:-1 tvg-name="郑州车道931" group-title="初秋语•电台" source-count="1",郑州车道931
+http://ls.qingting.fm/live/1221.m3u8
+#EXTINF:-1 tvg-name="湖北-长江水上信息安全台" group-title="初秋语•电台" source-count="1",湖北-长江水上信息安全台
+http://ls.qingting.fm/live/2694923.m3u8
+#EXTINF:-1 tvg-name="安全百科" group-title="初秋语•电台" source-count="1",安全百科
+http://stream3.hndt.com/now/4pcovD2L/playlist.m3u8
+#EXTINF:-1 tvg-name="天籁古典" group-title="初秋语•电台" source-count="1",天籁古典
+http://stream3.hndt.com/now/MdOpB4zP/playlist.m3u8
+#EXTINF:-1 tvg-name="浙江-SINCHANGVOICEOFTIENMU" group-title="初秋语•电台" source-count="1",浙江-SINCHANGVOICEOFTIENMU
+http://l.cztvcloud.com/channels/lantian/SXxinchangaud/128k.m3u8
+#EXTINF:-1 tvg-name="经典FM" group-title="初秋语•电台" source-count="1",经典FM
+http://stream3.hndt.com/now/C5NvUpwy/playlist.m3u8
+#EXTINF:-1 tvg-name="怀化交通频道" group-title="初秋语•电台" source-count="1",怀化交通频道
+http://ls.qingting.fm/live/3077141.m3u8
+#EXTINF:-1 tvg-name="摇滚天空" group-title="初秋语•电台" source-count="1",摇滚天空
+http://stream3.hndt.com/now/SXJtR4M4/playlist.m3u8
+#EXTINF:-1 tvg-name="潮流音悦" group-title="初秋语•电台" source-count="1",潮流音悦
+http://stream3.hndt.com/now/Or5au0KN/playlist.m3u8
+#EXTINF:-1 tvg-name="XUZHOU" group-title="初秋语•电台" source-count="1",XUZHOU
+http://lhttp.qingting.fm/live/4923/64k.mp3
+#EXTINF:-1 tvg-name="深圳宝安频道" group-title="初秋语•电台" source-count="1",深圳宝安频道
+http://live.xmcdn.com/live/2644/64.m3u8
+#EXTINF:-1 tvg-name="80后音悦" group-title="初秋语•电台" source-count="1",80后音悦
+http://stream3.hndt.com/now/SFZeH2cb/playlist.m3u8
+#EXTINF:-1 tvg-name="四川-SZECHUANVOICEOFTIENFU" group-title="初秋语•电台" source-count="1",四川-SZECHUANVOICEOFTIENFU
+http://live.xmcdn.com/live/1646/64.m3u8
+#EXTINF:-1 tvg-name="湖南-河南天籁之音" group-title="初秋语•电台" source-count="1",湖南-河南天籁之音
+http://stream.hndt.com/live/gudian/playlist.m3u8
+#EXTINF:-1 tvg-name="山西-山西广播电视台故事广播" group-title="初秋语•电台" source-count="1",山西-山西广播电视台故事广播
+http://lhttp.qingting.fm/live/5022511/64k.mp3
+#EXTINF:-1 tvg-name="500首华语经典" group-title="初秋语•电台" source-count="1",500首华语经典
+http://ls.qingting.fm/live/3412131.m3u8?bitrate=64
+#EXTINF:-1 tvg-name="湖南-长沙城市之音" group-title="初秋语•电台" source-count="1",湖南-长沙城市之音
+http://lhttp.qingting.fm/live/4237/64k.mp3
+#EXTINF:-1 tvg-name="广通-深圳龙岗频道" group-title="初秋语•电台" source-count="1",广通-深圳龙岗频道
+http://lhttp.qingting.fm/live/20160/64k.mp3
+#EXTINF:-1 tvg-name="90.7MIXFM" group-title="初秋语•电台" source-count="1",90.7MIXFM
+https://lhttp.qingting.fm/live/15318146/64k.mp3
+#EXTINF:-1 tvg-name="香港-ASIAFM亚洲天空台" group-title="初秋语•电台" source-count="1",香港-ASIAFM亚洲天空台
+https://lhttp.qingting.fm/live/20071/64k.mp3
+#EXTINF:-1 tvg-name="ASIAFM" group-title="初秋语•电台" source-count="1",ASIAFM
+https://lhttp.qingting.fm/live/5022405/64k.mp3
+#EXTINF:-1 tvg-name="ASIAFM亚洲经典台" group-title="初秋语•电台" source-count="1",ASIAFM亚洲经典台
+https://lhttp.qingting.fm/live/5021912/64k.mp3
+#EXTINF:-1 tvg-name="1766線上電臺-百家知識" group-title="初秋语•电台" source-count="1",1766線上電臺-百家知識
+http://livestream.1766.today:1768/live1.mp3
+#EXTINF:-1 tvg-name="LISTEN.MOEJPOPVORBIS" group-title="初秋语•电台" source-count="1",LISTEN.MOEJPOPVORBIS
+https://listen.moe/stream
+#EXTINF:-1 tvg-name="崂山921听见好时光" group-title="初秋语•电台" source-count="1",崂山921听见好时光
+http://lhttp.qingting.fm/live/20212426/64k.mp3
+#EXTINF:-1 tvg-name="CLASSICFM" group-title="初秋语•电台" source-count="1",CLASSICFM
+http://ice-sov.musicradio.com/ClassicFM
+#EXTINF:-1 tvg-name="BCC中广流行" group-title="初秋语•电台" source-count="1",BCC中广流行
+http://stream.rcs.revma.com/aw9uqyxy2tzuv
+#EXTINF:-1 tvg-name="KISSFM" group-title="初秋语•电台" source-count="1",KISSFM
+https://playerservices.streamtheworld.com/api/livestream-redirect/KISS_92AAC.aac
+#EXTINF:-1 tvg-name="MOONMISSIONRECORDINGS" group-title="初秋语•电台" source-count="1",MOONMISSIONRECORDINGS
+http://www.internet-radio.com/servers/tools/playlistgenerator/?u=http://uk5.internet-radio.com:8306/listen.pls&t=.m3u
+#EXTINF:-1 tvg-name="POWERFM" group-title="初秋语•电台" source-count="1",POWERFM
+https://crystalout.surfernetwork.com:8001/KVSP_MP3
+#EXTINF:-1 tvg-name="CNA938LIVESINGAPORE" group-title="初秋语•电台" source-count="1",CNA938LIVESINGAPORE
+http://playerservices.streamtheworld.com/pls/938NOW_PREM.pls
+#EXTINF:-1 tvg-name="GOLDFM" group-title="初秋语•电台" source-count="1",GOLDFM
+http://22903.live.streamtheworld.com:3690/GOLD905_PREM.aac
+#EXTINF:-1 tvg-name="LBCUK" group-title="初秋语•电台" source-count="1",LBCUK
+https://ice-sov.musicradio.com/LBCUKMP3
+#EXTINF:-1 tvg-name="YESFM" group-title="初秋语•电台" source-count="1",YESFM
+https://playerservices.streamtheworld.com/api/livestream-redirect/YES933AAC.aac
+#EXTINF:-1 tvg-name="湖南卫视" group-title="卫视" source-count="2" tvg-id="HunanTV.cn@SD",湖南卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.112:3002
+http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
+#EXTINF:-1 tvg-name="青海卫视" group-title="卫视" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/青海卫视.png",青海卫视
+https://piccpndali.v.myalicdn.com/audio/qinghai_2.m3u8
+#EXTINF:-1 tvg-name="香港卫视" group-title="卫视" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/香港卫视.png",香港卫视
+https://piccpndali.v.myalicdn.com/audio/xianggangweishi_2.m3u8
+#EXTINF:-1 tvg-name="凤凰卫视" group-title="卫视" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/凤凰中文.png",凤凰卫视
+http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8
+#EXTINF:-1 tvg-name="河南卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/河南卫视.png",河南卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.50:8184
+http://satellitepull.cnr.cn/live/wxhnws/playlist.m3u8
+#EXTINF:-1 tvg-name="黑龙江卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/黑龙江卫视.png",黑龙江卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.133:8016
+http://satellitepull.cnr.cn/live/wx32hljws/playlist.m3u8
+#EXTINF:-1 tvg-name="浙江-浙江卫视" group-title="卫视" source-count="1",浙江-浙江卫视
+http://satellitepull.cnr.cn/live/wxzjws/playlist.m3u8
+#EXTINF:-1 tvg-name="东南卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/东南卫视.png",东南卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.156:8148
+http://satellitepull.cnr.cn/live/wx32fjws/playlist.m3u8
+#EXTINF:-1 tvg-name="安徽卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/安徽卫视.png",安徽卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.211:8064
+http://satellitepull.cnr.cn/live/wxahws/playlist.m3u8
+#EXTINF:-1 tvg-name="天神-天津卫视" group-title="卫视" source-count="1",天神-天津卫视
+http://satellitepull.cnr.cn/live/wxtjws/playlist.m3u8
+#EXTINF:-1 tvg-name="陕西卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/陕西卫视.png",陕西卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.203:8220
+http://satellitepull.cnr.cn/live/wxsxxws/playlist.m3u8
+#EXTINF:-1 tvg-name="河北卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/河北卫视.png",河北卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.148:8072
+http://satellitepull.cnr.cn/live/wxhebws/playlist.m3u8
+#EXTINF:-1 tvg-name="海南卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/海南卫视.png",海南卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.205:8228
+http://satellitepull.cnr.cn/live/wxhainlyws/playlist.m3u8
+#EXTINF:-1 tvg-name="吉林卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/吉林卫视.png",吉林卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.240:8172
+http://satellitepull.cnr.cn/live/wxjlws/playlist.m3u8
+#EXTINF:-1 tvg-name="延边卫视" group-title="卫视" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/延边卫视.png",延边卫视
+http://satellitepull.cnr.cn/live/wxybws/playlist.m3u8
+#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/湖北卫视.png",湖北卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.138:8044
+http://satellitepull.cnr.cn/live/wx32hubws/playlist.m3u8
+#EXTINF:-1 tvg-name="山西卫视" group-title="卫视" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/山西卫视.png",山西卫视
+http://satellitepull.cnr.cn/live/wxssxws/playlist.m3u8
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/北京卫视.png",北京卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.22:8001
+http://satellitepull.cnr.cn/live/wxbtv/playlist.m3u8
+#EXTINF:-1 tvg-name="广东卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/广东卫视.png",广东卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.27:2000
+http://satellitepull.cnr.cn/live/wxgdws/playlist.m3u8
+#EXTINF:-1 tvg-name="重庆卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/重庆卫视.png",重庆卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.122:8160
+http://satellitepull.cnr.cn/live/wxcqws/playlist.m3u8
+#EXTINF:-1 tvg-name="甘肃卫视" group-title="卫视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/甘肃卫视.png",甘肃卫视
+#EXTM3U-FALLBACK:rtp://239.3.1.201:8180
+http://satellitepull.cnr.cn/live/wxgsws/playlist.m3u8
+#EXTINF:-1 tvg-name="云南卫视" group-title="卫视" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/云南卫视.png",云南卫视
+http://satellitepull.cnr.cn/live/wxynws/playlist.m3u8
+#EXTINF:-1 tvg-name="内蒙古卫视" group-title="卫视" source-count="1" tvg-id="75",内蒙古卫视
+rtp://239.3.1.204:8224
+#EXTINF:-1 tvg-name="四川卫视" group-title="卫视" source-count="1" tvg-id="142" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/SiChuan.png",四川卫视
+rtp://239.3.1.131:3001
+#EXTINF:-1 tvg-name="宁夏卫视" group-title="卫视" source-count="1" tvg-id="71" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/NingXia.png",宁夏卫视
+rtp://239.3.1.169:8212
+#EXTINF:-1 tvg-name="新疆卫视" group-title="卫视" source-count="1" tvg-id="64" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/XinJiang.png",新疆卫视
+rtp://239.3.1.167:8192
+#EXTINF:-1 tvg-name="西藏卫视" group-title="卫视" source-count="1" tvg-id="63" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/XiZang.png",西藏卫视
+rtp://239.3.1.166:8188
+#EXTINF:-1 tvg-name="贵州卫视" group-title="卫视" source-count="1" tvg-id="55" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/GuiZhou.png",贵州卫视
+rtp://239.3.1.149:8076
+#EXTINF:-1 tvg-name="东方卫视" group-title="卫视" source-count="1" tvg-id="45" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/DongFang.png",东方卫视
+rtp://239.3.1.119:3006
+#EXTINF:-1 tvg-name="兵团卫视" group-title="卫视" source-count="1" tvg-id="65" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/BingTuan.png",兵团卫视
+rtp://239.3.1.168:8196
+#EXTINF:-1 tvg-name="浙江国际" group-title="国际" source-count="2",浙江国际
+#EXTM3U-FALLBACK:http://ali-m-l.cztv.com/channels/lantian/channel010/1080p.m3u8
+https://ali-m-l.cztv.com/channels/lantian/channel010/1080p.m3u8
+#EXTINF:-1 tvg-name="古典-CHINESEMUSICWORLD" group-title="国际" source-count="1",古典-CHINESEMUSICWORLD
+http://radio.chinesemusicworld.com/chinesemusic.ogg
+#EXTINF:-1 tvg-name="北京国际" group-title="国际" source-count="1" tvg-id="131" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/BRTV/BRTV_International.png",北京国际
+rtp://239.3.1.235:8000
+#EXTINF:-1 tvg-name="中国-CHINESEMUSICWORLD" group-title="国际" source-count="1",中国-CHINESEMUSICWORLD
+https://radio.chinesemusicworld.com/chinesemusic.ogg
+#EXTINF:-1 tvg-name="福州广播电视台都市生活频道FZTV-3" group-title="地方" source-count="1",福州广播电视台都市生活频道FZTV-3
+http://live.zohi.tv/video/s10001-fztv-3/index.m3u8
+#EXTINF:-1 tvg-name="蕭山生活頻道NOT24/7" group-title="地方" source-count="1",蕭山生活頻道NOT24/7
+https://l.cztvcloud.com/channels/lantian/SXxiaoshan2/720p.m3u8
+#EXTINF:-1 tvg-name="武进生活NOT24/7" group-title="地方" source-count="1",武进生活NOT24/7
+https://live.wjyanghu.com/live/CH2.m3u8
+#EXTINF:-1 tvg-name="萧山生活频道" group-title="地方" source-count="1",萧山生活频道
+http://l.cztvcloud.com/channels/lantian/SXxiaoshan2/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="余杭综合频道" group-title="地方" source-count="1",余杭综合频道
+http://l.cztvcloud.com/channels/lantian/SXyuhang1/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="浙江钱江都市" group-title="地方" source-count="1",浙江钱江都市
+http://ali-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8
+#EXTINF:-1 tvg-name="辽宁-辽宁广播电视台生活广播" group-title="地方" source-count="1",辽宁-辽宁广播电视台生活广播
+http://lhttp.qingting.fm/live/1102/64k.mp3
+#EXTINF:-1 tvg-name="辽宁-辽宁广播电视台都市广播" group-title="地方" source-count="1",辽宁-辽宁广播电视台都市广播
+http://lhttp.qingting.fm/live/1099/64k.mp3
+#EXTINF:-1 tvg-name="深圳生活942" group-title="地方" source-count="1" tvg-logo="https://live.fanmingming.com/radio/深圳生活942.png",深圳生活942
+https://satellitepull.cnr.cn/live/wxszsjcgb/playlist.m3u8
+#EXTINF:-1 tvg-name="北京生活" group-title="地方" source-count="1" tvg-id="27" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/BRTV/BRTV_ShengHuo.png",北京生活
+rtp://239.3.1.117:8000
+#EXTINF:-1 tvg-name="CCTV-1" group-title="央视" source-count="2" tvg-id="CCTV1.cn@SD",CCTV-1
+#EXTM3U-FALLBACK:rtp://239.3.1.129:8008
+https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8
+#EXTINF:-1 tvg-name="CCTV-9576I" group-title="央视" source-count="1" tvg-id="CCTV9.cn@SD",CCTV-9576I
+https://xykt-fix.github.io/Y77.m3u8
+#EXTINF:-1 tvg-name="CCTV-15" group-title="央视" source-count="3" tvg-id="CCTV15.cn@SD",CCTV-15
+#EXTM3U-FALLBACK:https://piccpndali.v.myalicdn.com/audio/cctv15_2.m3u8|rtp://239.3.1.153:8136
+https://xykt-fix.github.io/play/a02e/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-11" group-title="央视" source-count="4" tvg-id="CCTV11.cn@SD",CCTV-11
+#EXTM3U-FALLBACK:http://74.91.26.218:82/live/cctv11hd.m3u8|https://piccpndali.v.myalicdn.com/audio/cctv11_2.m3u8|rtp://239.3.1.152:8120
+https://xykt-fix.github.io/play/a02b/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-13" group-title="央视" source-count="3" tvg-id="CCTV13.cn@SD",CCTV-13
+#EXTM3U-FALLBACK:https://piccpndali.v.myalicdn.com/audio/cctv13_2.m3u8|rtp://239.3.1.124:8128
+http://74.91.26.218:82/live/cctv13hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-10576I" group-title="央视" source-count="1" tvg-id="CCTV10.cn@SD",CCTV-10576I
+https://cdn4.skygo.mn/live/disk1/CCTV-10/HLSv3-FTA/CCTV-10.m3u8
+#EXTINF:-1 tvg-name="CCTV-17" group-title="央视" source-count="3" tvg-id="CCTV17.cn@HD",CCTV-17
+#EXTM3U-FALLBACK:https://piccpndali.v.myalicdn.com/audio/cctv17_2.m3u8|rtp://239.3.1.151:8144
+http://74.91.26.218:82/live/cctv17hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-8" group-title="央视" source-count="3" tvg-logo="https://live.fanmingming.cn/tv/CCTV8.png",CCTV-8
+#EXTM3U-FALLBACK:rtp://239.3.1.175:8001|http://74.91.26.218:82/live/cctv8hd.m3u8
+https://piccpndali.v.myalicdn.com/audio/cctv8_2.m3u8
+#EXTINF:-1 tvg-name="CCTV-9" group-title="央视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/CCTV9.png",CCTV-9
+#EXTM3U-FALLBACK:rtp://239.3.1.62:8112
+https://piccpndali.v.myalicdn.com/audio/cctv9_2.m3u8
+#EXTINF:-1 tvg-name="CCTV-16" group-title="央视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/CCTV16.png",CCTV-16
+#EXTM3U-FALLBACK:http://74.91.26.218:82/live/cctv16hd.m3u8
+https://piccpndali.v.myalicdn.com/audio/cctv16_2.m3u8
+#EXTINF:-1 tvg-name="CCTV-4" group-title="央视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/CCTV4.png",CCTV-4
+#EXTM3U-FALLBACK:rtp://239.3.1.105:8092
+https://piccpndali.v.myalicdn.com/audio/cctv4_2.m3u8
+#EXTINF:-1 tvg-name="CCTV-7" group-title="央视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/CCTV7.png",CCTV-7
+#EXTM3U-FALLBACK:rtp://239.3.1.61:8104
+https://piccpndali.v.myalicdn.com/audio/cctv7_2.m3u8
+#EXTINF:-1 tvg-name="CCTV-14" group-title="央视" source-count="3" tvg-logo="https://live.fanmingming.cn/tv/CCTV14.png",CCTV-14
+#EXTM3U-FALLBACK:rtp://239.3.1.65:8132|http://74.91.26.218:82/live/cctv14hd.m3u8
+https://piccpndali.v.myalicdn.com/audio/cctv14_2.m3u8
+#EXTINF:-1 tvg-name="CCTV-12" group-title="央视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/CCTV12.png",CCTV-12
+#EXTM3U-FALLBACK:rtp://239.3.1.64:8124
+https://piccpndali.v.myalicdn.com/audio/cctv12_2.m3u8
+#EXTINF:-1 tvg-name="CCTV-10" group-title="央视" source-count="3" tvg-logo="https://live.fanmingming.cn/tv/CCTV10.png",CCTV-10
+#EXTM3U-FALLBACK:rtp://239.3.1.63:8116|http://74.91.26.218:82/live/cctv10hd.m3u8
+https://piccpndali.v.myalicdn.com/audio/cctv10_2.m3u8
+#EXTINF:-1 tvg-name="CCTV-5" group-title="央视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/CCTV5.png",CCTV-5
+#EXTM3U-FALLBACK:rtp://239.3.1.173:8001
+https://piccpndali.v.myalicdn.com/audio/cctv5_2.m3u8
+#EXTINF:-1 tvg-name="CCTV-6" group-title="央视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/CCTV6.png",CCTV-6
+#EXTM3U-FALLBACK:rtp://239.3.1.174:8001
+https://piccpndali.v.myalicdn.com/audio/cctv6_2.m3u8
+#EXTINF:-1 tvg-name="CCTV-2" group-title="央视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/CCTV2.png",CCTV-2
+#EXTM3U-FALLBACK:rtp://239.3.1.60:8084
+https://piccpndali.v.myalicdn.com/audio/cctv2_2.m3u8
+#EXTINF:-1 tvg-name="CCTV-3" group-title="央视" source-count="2" tvg-logo="https://live.fanmingming.cn/tv/CCTV3.png",CCTV-3
+#EXTM3U-FALLBACK:rtp://239.3.1.172:8001
+https://piccpndali.v.myalicdn.com/audio/cctv3_2.m3u8
+#EXTINF:-1 tvg-name="CCTV-4中文国际欧洲" group-title="央视" source-count="1" tvg-id="341" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-4-EUO.png",CCTV-4中文国际欧洲
+rtp://239.3.1.213:4220
+#EXTINF:-1 tvg-name="CCTV-4中文国际美洲" group-title="央视" source-count="1" tvg-id="342" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-4-AME.png",CCTV-4中文国际美洲
+rtp://239.3.1.214:4220
+#EXTINF:-1 tvg-name="CCTV-5-体育赛事" group-title="央视" source-count="1" tvg-id="18" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-5+.png",CCTV-5-体育赛事
+rtp://239.3.1.130:8004
+#EXTINF:-1 tvg-name="CCTV-16奥林匹克" group-title="央视" source-count="1" tvg-id="16" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CCTV-16.png",CCTV-16奥林匹克
+rtp://239.3.1.184:8001
+#EXTINF:-1 tvg-name="福州电视台少儿频道FZTV-少儿" group-title="少儿" source-count="1",福州电视台少儿频道FZTV-少儿
+http://live.zohi.tv/video/s10001-fztv-4/index.m3u8
+#EXTINF:-1 tvg-name="浙江少儿" group-title="少儿" source-count="1",浙江少儿
+http://ali-m-l.cztv.com/channels/lantian/channel008/1080p.m3u8
+#EXTINF:-1 tvg-name="卡酷少儿" group-title="少儿" source-count="1" tvg-id="28" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/BRTV/BRTV_KakuShaoEr.png",卡酷少儿
+rtp://239.3.1.189:8000
+#EXTINF:-1 tvg-name="少儿动画" group-title="少儿" source-count="1" tvg-id="207",少儿动画
+rtp://239.3.1.199:9000
+#EXTINF:-1 tvg-name="动画" group-title="少儿" source-count="1" tvg-id="364",动画
+rtp://239.3.1.80:4120
+#EXTINF:-1 tvg-name="浙江I绍兴影视" group-title="影视" source-count="1",浙江I绍兴影视
+http://live.shaoxing.com.cn/video/s10001-sxtv3/index.m3u8
+#EXTINF:-1 tvg-name="新昌休闲影视NOT24/7" group-title="影视" source-count="1",新昌休闲影视NOT24/7
+https://l.cztvcloud.com/channels/lantian/SXxinchang2/720p.m3u8
+#EXTINF:-1 tvg-name="浙江教科影院" group-title="影视" source-count="1",浙江教科影院
+http://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8
+#EXTINF:-1 tvg-name="上虞文化影院" group-title="影视" source-count="1",上虞文化影院
+http://l.cztvcloud.com/channels/lantian/SXshangyu2/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="家庭影院" group-title="影视" source-count="1" tvg-id="377",家庭影院
+rtp://239.3.1.93:4120
+#EXTINF:-1 tvg-name="古装剧场" group-title="影视" source-count="1" tvg-id="353",古装剧场
+rtp://239.3.1.69:4120
+#EXTINF:-1 tvg-name="军旅剧场" group-title="影视" source-count="1" tvg-id="352",军旅剧场
+rtp://239.3.1.68:4120
+#EXTINF:-1 tvg-name="北京影视" group-title="影视" source-count="1" tvg-id="24" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/BRTV/BRTV_YingShi.png",北京影视
+rtp://239.3.1.158:8000
+#EXTINF:-1 tvg-name="CHC动作电影" group-title="影视" source-count="1" tvg-id="70",CHC动作电影
+rtp://239.3.1.106:8001
+#EXTINF:-1 tvg-name="城市剧场" group-title="影视" source-count="1" tvg-id="351",城市剧场
+rtp://239.3.1.67:4120
+#EXTINF:-1 tvg-name="武侠剧场" group-title="影视" source-count="1" tvg-id="374",武侠剧场
+rtp://239.3.1.90:4120
+#EXTINF:-1 tvg-name="喜剧影院" group-title="影视" source-count="1" tvg-id="375",喜剧影院
+rtp://239.3.1.91:4120
+#EXTINF:-1 tvg-name="动作影院" group-title="影视" source-count="1" tvg-id="376",动作影院
+rtp://239.3.1.92:4120
+#EXTINF:-1 tvg-name="经典电影" group-title="影视" source-count="1" tvg-id="203",经典电影
+rtp://239.3.1.195:9024
+#EXTINF:-1 tvg-name="热播剧场" group-title="影视" source-count="1" tvg-id="202",热播剧场
+rtp://239.3.1.194:9020
+#EXTINF:-1 tvg-name="江津经济生活" group-title="新闻" source-count="1",江津经济生活
+http://222.179.155.21:1935/ch0.m3u8
+#EXTINF:-1 tvg-name="江津新闻综合" group-title="新闻" source-count="1",江津新闻综合
+http://222.179.155.21:1935/ch1.m3u8
+#EXTINF:-1 tvg-name="湘潭新闻综合" group-title="新闻" source-count="1",湘潭新闻综合
+http://live.hnxttv.com:9601/live/xwzh/800K/tzwj_video.m3u8
+#EXTINF:-1 tvg-name="宿州新闻综合NOT24/7" group-title="新闻" source-count="1",宿州新闻综合NOT24/7
+http://live.ahsz.tv/video/s10001-szzh/index.m3u8
+#EXTINF:-1 tvg-name="余姚新闻综合" group-title="新闻" source-count="2",余姚新闻综合
+#EXTM3U-FALLBACK:http://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8?zzhed
+https://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8
+#EXTINF:-1 tvg-name="萧山新闻综合NOT24/7" group-title="新闻" source-count="1",萧山新闻综合NOT24/7
+https://l.cztvcloud.com/channels/lantian/SXxiaoshan1/720p.m3u8
+#EXTINF:-1 tvg-name="浙江新闻" group-title="新闻" source-count="2",浙江新闻
+#EXTM3U-FALLBACK:http://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8
+https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8
+#EXTINF:-1 tvg-name="浙江经济" group-title="新闻" source-count="1",浙江经济
+https://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8
+#EXTINF:-1 tvg-name="辽源新闻综合" group-title="新闻" source-count="1",辽源新闻综合
+https://stream2.jlntv.cn/liaoyuan1/sd/live.m3u8
+#EXTINF:-1 tvg-name="白城新闻综合" group-title="新闻" source-count="1" tvg-id="BaichengTV.cn@SD",白城新闻综合
+https://stream2.jlntv.cn/baicheng1/sd/live.m3u8
+#EXTINF:-1 tvg-name="松原新闻综合" group-title="新闻" source-count="1",松原新闻综合
+https://stream2.jlntv.cn/sytv/sd/live.m3u8
+#EXTINF:-1 tvg-name="延边新闻综合" group-title="新闻" source-count="1",延边新闻综合
+https://stream2.jlntv.cn/jlyb/sd/live.m3u8
+#EXTINF:-1 tvg-name="武进新闻NOT24/7" group-title="新闻" source-count="1",武进新闻NOT24/7
+https://live.wjyanghu.com/live/CH1.m3u8
+#EXTINF:-1 tvg-name="福州广播电视台新闻综合频道FZTV-1" group-title="新闻" source-count="1",福州广播电视台新闻综合频道FZTV-1
+http://live.zohi.tv/video/s10001-fztv-1/index.m3u8
+#EXTINF:-1 tvg-name="吉林市新闻综合" group-title="新闻" source-count="1",吉林市新闻综合
+https://stream2.jlntv.cn/jilin1/sd/live.m3u8
+#EXTINF:-1 tvg-name="靖江新闻綜合NOT24/7" group-title="新闻" source-count="1",靖江新闻綜合NOT24/7
+http://visit.jjbctv.com:1935/live/xwzhmb/playlist.m3u8
+#EXTINF:-1 tvg-name="四平新闻综合" group-title="新闻" source-count="1",四平新闻综合
+https://stream2.jlntv.cn/sptv/sd/live.m3u8
+#EXTINF:-1 tvg-name="白山新闻综合" group-title="新闻" source-count="1",白山新闻综合
+https://stream2.jlntv.cn/baishan1/sd/live.m3u8
+#EXTINF:-1 tvg-name="通化新闻" group-title="新闻" source-count="1",通化新闻
+https://stream2.jlntv.cn/tonghua1/sd/live.m3u8
+#EXTINF:-1 tvg-name="农安新闻综合" group-title="新闻" source-count="1",农安新闻综合
+https://stream2.jlntv.cn/naxw/sd/live.m3u8
+#EXTINF:-1 tvg-name="CGTN" group-title="新闻" source-count="4" tvg-id="CGTN.cn@SD",CGTN
+#EXTM3U-FALLBACK:https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8|https://0472.org/hls/cgtn.m3u8|https://hlspackager.akamaized.net/live/DB/CGTN_ENGLISH/HLS/CGTN_ENGLISH.m3u8
+https://english-livebkali.cgtn.com/live/encgtn.m3u8
+#EXTINF:-1 tvg-name="CGTNSPANISH" group-title="新闻" source-count="1" tvg-id="CGTNSpanish.cn@SD",CGTNSPANISH
+http://45.186.106.147:8880/play/a06f/index.m3u8
+#EXTINF:-1 tvg-name="JIANGSUPUBLIC&NEWSCHANNEL" group-title="新闻" source-count="1" tvg-id="JiangsuPublicNewsChannel.cn@SD",JIANGSUPUBLIC&NEWSCHANNEL
+https://jiangning-tv-playing-t.cm.jstv.com/jiangning-tv/jnxwzh.m3u8
+#EXTINF:-1 tvg-name="上虞1新闻综合NOT24/7" group-title="新闻" source-count="1",上虞1新闻综合NOT24/7
+https://l.cztvcloud.com/channels/lantian/SXshangyu1/720p.m3u8
+#EXTINF:-1 tvg-name="CGTNGLOBALBIZ" group-title="新闻" source-count="1" tvg-id="CGTNGlobalBiz.cn@SD",CGTNGLOBALBIZ
+https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8
+#EXTINF:-1 tvg-name="CGTNDOCUMENTARY" group-title="新闻" source-count="2" tvg-id="CGTNDocumentary.cn@SD",CGTNDOCUMENTARY
+#EXTM3U-FALLBACK:https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
+https://hlspackager.akamaized.net/live/DB/CGTN_DOCUMENTARY/HLS/CGTN_DOCUMENTARY.m3u8
+#EXTINF:-1 tvg-name="CGTNNEWS" group-title="新闻" source-count="1",CGTNNEWS
+http://sk.cri.cn/am846.m3u8
+#EXTINF:-1 tvg-name="武义新闻综合" group-title="新闻" source-count="1",武义新闻综合
+http://l.cztvcloud.com/channels/lantian/SXwuyi1/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="中国蓝新闻" group-title="新闻" source-count="1",中国蓝新闻
+http://ali-m-l.cztv.com/channels/lantian/channel009/1080p.m3u8
+#EXTINF:-1 tvg-name="诸暨新闻综合" group-title="新闻" source-count="1",诸暨新闻综合
+http://l.cztvcloud.com/channels/lantian/SXzhuji3/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="嵊州新闻综合" group-title="新闻" source-count="1",嵊州新闻综合
+http://l.cztvcloud.com/channels/lantian/SXshengzhou1/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="浙江经济生活" group-title="新闻" source-count="1",浙江经济生活
+http://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8
+#EXTINF:-1 tvg-name="萧山新闻综合" group-title="新闻" source-count="1",萧山新闻综合
+http://l.cztvcloud.com/channels/lantian/SXxiaoshan1/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="怀化新闻频道" group-title="新闻" source-count="1",怀化新闻频道
+http://ls.qingting.fm/live/3077068.m3u8
+#EXTINF:-1 tvg-name="大象资讯台" group-title="新闻" source-count="1" tvg-logo="https://live.fanmingming.com/radio/大象资讯台.png",大象资讯台
+https://stream.hndt.com/live/nongcun/playlist.m3u8
+#EXTINF:-1 tvg-name="平湖新闻综合" group-title="新闻" source-count="1",平湖新闻综合
+http://l.cztvcloud.com/channels/lantian/SXpinghu1/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="兰溪新闻综合" group-title="新闻" source-count="1",兰溪新闻综合
+http://l.cztvcloud.com/channels/lantian/SXlanxi1/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="上虞新闻综合" group-title="新闻" source-count="1",上虞新闻综合
+http://l.cztvcloud.com/channels/lantian/SXshangyu1/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="CHANNELNEWSASIATV" group-title="新闻" source-count="1",CHANNELNEWSASIATV
+http://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8
+#EXTINF:-1 tvg-name="第一财经" group-title="新闻" source-count="2",第一财经
+#EXTM3U-FALLBACK:http://lhttp.qingting.fm/live/276/64k.mp3
+http://satellitepull.cnr.cn/live/wx32dycjgb/playlist.m3u8
+#EXTINF:-1 tvg-name="吉林-吉林市广播电视台经济广播" group-title="新闻" source-count="1",吉林-吉林市广播电视台经济广播
+http://lhttp.qingting.fm/live/1823/64k.mp3
+#EXTINF:-1 tvg-name="江西-江西广播电视台新闻广播" group-title="新闻" source-count="1",江西-江西广播电视台新闻广播
+http://lhttp.qingting.fm/live/1809/64k.mp3
+#EXTINF:-1 tvg-name="中广新闻网" group-title="新闻" source-count="2" tvg-logo="https://live.fanmingming.com/radio/中广新闻网.png",中广新闻网
+#EXTM3U-FALLBACK:http://stream.rcs.revma.com/78fm9wyy2tzuv
+http://stream.rcs.revma.com/78fm9wyy2tzuv
+#EXTINF:-1 tvg-name="BBCNEWS" group-title="新闻" source-count="1",BBCNEWS
+https://utulsa.streamguys1.com/KWGSHD3-MP3
+#EXTINF:-1 tvg-name="NPRNEWS" group-title="新闻" source-count="1",NPRNEWS
+http://npr-ice.streamguys1.com/live.mp3
+#EXTINF:-1 tvg-name="BCC中广新闻" group-title="新闻" source-count="1",BCC中广新闻
+http://stream.rcs.revma.com/78fm9wyy2tzuv
+#EXTINF:-1 tvg-name="NPR|MPRNEWS" group-title="新闻" source-count="1" tvg-logo="https://cdn-profiles.tunein.com/s34350/images/logod.png",NPR|MPRNEWS
+http://nis.stream.publicradio.org/nis.mp3
+#EXTINF:-1 tvg-name="LBCNEWS" group-title="新闻" source-count="1",LBCNEWS
+https://icecast.thisisdax.com/LBCNewsUKMP3
+#EXTINF:-1 tvg-name="CGTN英语" group-title="新闻" source-count="1" tvg-id="343" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CGTN.png",CGTN英语
+rtp://239.3.1.215:4220
+#EXTINF:-1 tvg-name="CGTN西语" group-title="新闻" source-count="1" tvg-id="345" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CGTN-Espanol.png",CGTN西语
+rtp://239.3.1.217:4220
+#EXTINF:-1 tvg-name="CGTN俄语" group-title="新闻" source-count="1" tvg-id="348" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CGTN-Russian.png",CGTN俄语
+rtp://239.3.1.220:4220
+#EXTINF:-1 tvg-name="CGTN法语" group-title="新闻" source-count="1" tvg-id="346" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CGTN-Francis.png",CGTN法语
+rtp://239.3.1.218:4220
+#EXTINF:-1 tvg-name="CGTN阿语" group-title="新闻" source-count="1" tvg-id="347" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CGTN-Arabic.png",CGTN阿语
+rtp://239.3.1.219:4220
+#EXTINF:-1 tvg-name="CGTN纪录" group-title="新闻" source-count="1" tvg-id="344" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/CCTV/CGTN-Doc.png",CGTN纪录
+rtp://239.3.1.216:4220
+#EXTINF:-1 tvg-name="北京新闻" group-title="新闻" source-count="1" tvg-id="29" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/BRTV/BRTV_XinWen.png",北京新闻
+rtp://239.3.1.159:8000
+#EXTINF:-1 tvg-name="北京财经" group-title="新闻" source-count="1" tvg-id="25" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/BRTV/BRTV_CaiJing.png",北京财经
+rtp://239.3.1.116:8000
+#EXTINF:-1 tvg-name="证券服务" group-title="新闻" source-count="1" tvg-id="80" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/QiTa/GanSu_ZhengQuanFuWu.png",证券服务
+rtp://239.3.1.24:8001
+#EXTINF:-1 tvg-name="凤凰资讯" group-title="港澳台" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/凤凰资讯.png",凤凰资讯
+http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8
+#EXTINF:-1 tvg-name="TVBSASIA" group-title="港澳台" source-count="1" tvg-id="TVBSAsia.tw@SD",TVBSASIA
+http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
+#EXTINF:-1 tvg-name="DISCOVERINGCHINA" group-title="纪录" source-count="1" tvg-id="DiscoveringChina.cn@SD",DISCOVERINGCHINA
+https://fastlive.cctvplus.com/out/v1/8442c3bfd4c64a3984389328f6087879/index.m3u8
+#EXTINF:-1 tvg-name="之江纪录" group-title="纪录" source-count="1",之江纪录
+https://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8
+#EXTINF:-1 tvg-name="纪实科教" group-title="纪录" source-count="1" tvg-id="23" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/BRTV/BRTV_JiShiKeJiao.png",纪实科教
+rtp://239.3.1.115:8000
+#EXTINF:-1 tvg-name="求索纪录" group-title="纪录" source-count="1" tvg-id="36",求索纪录
+rtp://239.3.1.107:8001
+#EXTINF:-1 tvg-name="金鹰纪实" group-title="纪录" source-count="1" tvg-id="77" tvg-logo="https://raw.githubusercontent.com/zzzz0317/beijing-unicom-iptv-playlist/refs/heads/main/img/WeiShi/HuNan_JingYingJiShi.png",金鹰纪实
+rtp://239.3.1.58:8156
+#EXTINF:-1 tvg-name="CETV3" group-title="范明明•电台1" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/CETV3.png",CETV3
+https://piccpndali.v.myalicdn.com/audio/cetv3_2.m3u8
+#EXTINF:-1 tvg-name="CCTV4欧洲" group-title="范明明•电台1" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/CCTV4欧洲.png",CCTV4欧洲
+https://piccpndali.v.myalicdn.com/audio/cctveurope_2.m3u8
+#EXTINF:-1 tvg-name="CETV2" group-title="范明明•电台1" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/CETV2.png",CETV2
+https://piccpndali.v.myalicdn.com/audio/cetv2_2.m3u8
+#EXTINF:-1 tvg-name="CETV1" group-title="范明明•电台1" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/CETV1.png",CETV1
+https://piccpndali.v.myalicdn.com/audio/cetv1_2.m3u8
+#EXTINF:-1 tvg-name="CCTV4美洲" group-title="范明明•电台1" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/CCTV4美洲.png",CCTV4美洲
+https://piccpndali.v.myalicdn.com/audio/cctvamerica_2.m3u8
+#EXTINF:-1 tvg-name="CETV4" group-title="范明明•电台1" source-count="1" tvg-logo="https://live.fanmingming.cn/tv/CETV4.png",CETV4
+https://piccpndali.v.myalicdn.com/audio/cetv4_2.m3u8
+#EXTINF:-1 tvg-name="RTHK2" group-title="范明明•电台1" source-count="1" tvg-logo="https://live.fanmingming.cn/radio/rthk.png",RTHK2
+https://rthkradio2-live.akamaized.net/hls/live/2040078/radio2/master.m3u8
+#EXTINF:-1 tvg-name="RTHK5" group-title="范明明•电台1" source-count="1" tvg-logo="https://live.fanmingming.cn/radio/rthk.png",RTHK5
+https://rthkradio5-live.akamaized.net/hls/live/2040081/radio5/master.m3u8
+#EXTINF:-1 tvg-name="美国之音" group-title="范明明•电台1" source-count="2" tvg-logo="https://live.fanmingming.cn/radio/美国之音.png",美国之音
+#EXTM3U-FALLBACK:https://voa-ingest.akamaized.net/hls/live/2035206/151_124L/playlist.m3u8
+https://voa-ingest.akamaized.net/hls/live/2035206/151_124L/playlist.m3u8
+#EXTINF:-1 tvg-name="RTHK1" group-title="范明明•电台1" source-count="1" tvg-logo="https://live.fanmingming.cn/radio/rthk.png",RTHK1
+https://rthkradio1-live.akamaized.net/hls/live/2035313/radio1/master.m3u8
+#EXTINF:-1 tvg-name="RTHK普通话" group-title="范明明•电台1" source-count="1" tvg-logo="https://live.fanmingming.cn/radio/rthk.png",RTHK普通话
+https://rthkradiopth-live.akamaized.net/hls/live/2040082/radiopth/master.m3u8
+#EXTINF:-1 tvg-name="RTHK4" group-title="范明明•电台1" source-count="1" tvg-logo="https://live.fanmingming.cn/radio/rthk.png",RTHK4
+https://rthkradio4-live.akamaized.net/hls/live/2040080/radio4/master.m3u8
+#EXTINF:-1 tvg-name="RTHK3" group-title="范明明•电台1" source-count="1" tvg-logo="https://live.fanmingming.cn/radio/rthk.png",RTHK3
+https://rthkradio3-live.akamaized.net/hls/live/2040079/radio3/master.m3u8
+#EXTINF:-1 tvg-name="私家车999" group-title="范明明•电台2" source-count="1" tvg-logo="https://live.fanmingming.com/radio/私家车999.png",私家车999
+https://stream.hndt.com/live/sijiache/playlist.m3u8
+#EXTINF:-1 tvg-name="世界华声" group-title="范明明•电台2" source-count="1" tvg-logo="https://live.fanmingming.com/radio/世界华声.png",世界华声
+http://sk.cri.cn/hxfh.m3u8
+#EXTINF:-1 tvg-name="深圳飞扬971" group-title="范明明•电台2" source-count="1" tvg-logo="https://live.fanmingming.com/radio/深圳飞扬971.png",深圳飞扬971
+https://satellitepull.cnr.cn/live/wxszfy971/playlist.m3u8
+#EXTINF:-1 tvg-name="NPR|KPBS" group-title="范明明•电台2" source-count="1" tvg-logo="https://cdn-profiles.tunein.com/s34633/images/logog.jpg?t=154843",NPR|KPBS
+http://kpbs-wowza.streamguys1.com/live/smil:kpbs.smil/live/kpbs256kaac.stream/playlist.m3u8
+#EXTINF:-1 tvg-name="LOVE972" group-title="范明明•电台2" source-count="1" tvg-logo="https://live.fanmingming.com/radio/love972.png",LOVE972
+https://14033.live.streamtheworld.com/LOVE972FM_PREM.aac
+#EXTINF:-1 tvg-name="NPR|WOSU" group-title="范明明•电台2" source-count="1" tvg-logo="https://mytuner.global.ssl.fastly.net/media/tvos_radios/8FHMcwz5yR.png",NPR|WOSU
+http://wosu.streamguys1.com/NPR_256
+#EXTINF:-1 tvg-name="中广流行网" group-title="范明明•电台2" source-count="1" tvg-logo="https://live.fanmingming.com/radio/中广流行网.png",中广流行网
+http://stream.rcs.revma.com/aw9uqyxy2tzuv
+#EXTINF:-1 tvg-name="CAPITAL958" group-title="范明明•电台2" source-count="1" tvg-logo="https://live.fanmingming.com/radio/capital958.png",CAPITAL958
+https://19183.live.streamtheworld.com/CAPITAL958FM_PREM.aac
+#EXTINF:-1 tvg-name="NPR|CPR" group-title="范明明•电台2" source-count="1" tvg-logo="https://dbs.radioline.fr/pictures/radio_18d695eec54b624bc60502d504581c80/logo200.jpg?size=600",NPR|CPR
+https://stream2.cprnetwork.org/2198_256.aac/playlist.m3u8
+#EXTINF:-1 tvg-name="YES933" group-title="范明明•电台2" source-count="1" tvg-logo="https://live.fanmingming.com/radio/yes933.png",YES933
+https://22393.live.streamtheworld.com/YES933_PREM.aac
+#EXTINF:-1 tvg-name="好FM" group-title="范明明•电台2" source-count="1" tvg-logo="https://live.fanmingming.com/radio/好fm.png",好FM
+https://22283.live.streamtheworld.com/HAO_963AAC.aac
+#EXTINF:-1 tvg-name="NPR|WBEZ" group-title="范明明•电台2" source-count="1" tvg-logo="https://cdn-profiles.tunein.com/s27410/images/logod.png",NPR|WBEZ
+http://stream.wbez.org/wbezlinear
+#EXTINF:-1 tvg-name="VOCALO" group-title="范明明•电台2" source-count="1" tvg-logo="https://i1.wp.com/vocalo.org/wp-content/uploads/2017/01/black_teal_square.png?resize=170%2C170&ssl=1",VOCALO
+https://stream.wbez.org/vocalolinear
+#EXTINF:-1 tvg-name="NPR|KWMU" group-title="范明明•电台2" source-count="1" tvg-logo="https://cdn-profiles.tunein.com/s124949/images/logog.png?t=161850",NPR|KWMU
+http://kwmu-flash.streamguys1.com/live/smil:kwmu1.smil/live/kwmu1-256k.stream/playlist.m3u8
+#EXTINF:-1 tvg-name="CNA938" group-title="范明明•电台2" source-count="1" tvg-logo="https://www.melisten.sg/api/blob/10711300/3600973250882fa11b0b01b71a9d6e5d/cna938-logoImage.png",CNA938
+https://14033.live.streamtheworld.com/938NOW_PREM.aac
+#EXTINF:-1 tvg-name="深圳飞扬音乐971" group-title="音乐" source-count="1",深圳飞扬音乐971
+http://ls.qingting.fm/live/1271.m3u8
+#EXTINF:-1 tvg-name="民谣音乐" group-title="音乐" source-count="1",民谣音乐
+http://stream3.hndt.com/now/DTK5qc83/playlist.m3u8
+#EXTINF:-1 tvg-name="江西-江西广播电视台文艺音乐广播" group-title="音乐" source-count="1",江西-江西广播电视台文艺音乐广播
+http://lhttp.qingting.fm/live/1802/64k.mp3
+#EXTINF:-1 tvg-name="辽宁-辽宁广播电视台音乐广播" group-title="音乐" source-count="1",辽宁-辽宁广播电视台音乐广播
+http://lhttp.qingting.fm/live/1101/64k.mp3
+#EXTINF:-1 tvg-name="MYFM全国音乐频道-广州" group-title="音乐" source-count="1",MYFM全国音乐频道-广州
+http://lhttp.qingting.fm/live/20194/64k.mp3
+#EXTINF:-1 tvg-name="安徽-合肥汽车音乐" group-title="音乐" source-count="1",安徽-合肥汽车音乐
+http://lhttp.qingting.fm/live/1975/64k.mp3
+#EXTINF:-1 tvg-name="中广音乐网" group-title="音乐" source-count="1" tvg-logo="https://live.fanmingming.com/radio/中广音乐网.png",中广音乐网
+http://stream.rcs.revma.com/ks4vsmg3qtzuv
+#EXTINF:-1 tvg-name="BCC中广音乐" group-title="音乐" source-count="1",BCC中广音乐
+http://stream.rcs.revma.com/ks4vsmg3qtzuv
