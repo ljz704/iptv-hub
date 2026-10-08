@@ -5,7 +5,7 @@
     {
       "name": "聚合直播",
       "type": 0,
-      "url": "./live_multi.m3u",
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/ljz704/iptv-hub/main/dist/live_multi.m3u",
       "playerType": 1
     }
   ],

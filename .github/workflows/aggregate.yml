@@ -50,6 +50,12 @@ jobs:
           fi
         continue-on-error: true
 
+      - name: 重建 TVBox 配置
+        run: |
+          # 上一步只产出裸配置，这一步补上实测可用的点播源与 spider 镜像，
+          # 并用 gh-proxy.com 替换不可达的 raw.githubusercontent.com 地址。
+          python build_tvbox_config.py
+
       - name: 统计结果
         run: |
           echo "=== 输出文件 ==="

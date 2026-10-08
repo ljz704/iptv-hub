@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import io
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -77,6 +78,16 @@ def main():
             continue
         merged.append(s)
 
+    # 直播源地址：
+    #   本地部署用相对路径 ./live_multi.m3u 没问题，
+    #   但推送到 GitHub 后电视端拉的是远程配置，必须给绝对地址。
+    #   通过环境变量 LIVE_M3U_BASE 控制，默认走 GitHub raw 镜像。
+    base = os.getenv(
+        'LIVE_M3U_BASE',
+        'https://gh-proxy.com/https://raw.githubusercontent.com/'
+        'ljz704/iptv-hub/main/dist')
+    live_url = f"{base.rstrip('/')}/live_multi.m3u"
+
     final = {
         "spider": SPIDER,
         "wallpaper": "https://bing.img.run/1920x1080.php",
@@ -84,7 +95,7 @@ def main():
             {
                 "name": "聚合直播",
                 "type": 0,
-                "url": "./live_multi.m3u",
+                "url": live_url,
                 "playerType": 1,
             }
         ],
@@ -96,7 +107,7 @@ def main():
 
     print(f'已生成 {out}')
     print(f'  点播源: {len(merged)} 个（其中实测可用 {len(VOD_SITES)} 个）')
-    print(f'  直播源: {len(final["lives"])} 组')
+    print(f'  直播地址: {live_url}')
     print(f'  spider: {SPIDER[:70]}...')
     print()
     print('实测可用的点播源:')
