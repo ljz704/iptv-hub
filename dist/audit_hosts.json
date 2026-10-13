@@ -17,9 +17,9 @@
     },
     {
       "host": "ls.qingting.fm",
-      "count": 362,
-      "kw_ratio": 0.779,
-      "song_ratio": 0.0028,
+      "count": 364,
+      "kw_ratio": 0.7775,
+      "song_ratio": 0.0027,
       "blocked": false
     },
     {
@@ -79,16 +79,16 @@
       "blocked": false
     },
     {
-      "host": "ali-m-l.cztv.com",
+      "host": "39.134.67.108",
       "count": 47,
-      "kw_ratio": 0.5957,
+      "kw_ratio": 0.9149,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "39.134.67.108",
-      "count": 47,
-      "kw_ratio": 0.9149,
+      "host": "ali-m-l.cztv.com",
+      "count": 46,
+      "kw_ratio": 0.587,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -117,13 +117,6 @@
       "host": "piccpndali.v.myalicdn.com",
       "count": 27,
       "kw_ratio": 0.8519,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "101.66.194.125:9901",
-      "count": 25,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -170,17 +163,17 @@
       "blocked": false
     },
     {
+      "host": "74.91.26.218:82",
+      "count": 18,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "35848.hlsplay.aodianyun.com",
       "count": 17,
       "kw_ratio": 0.1176,
       "song_ratio": 0.2941,
-      "blocked": false
-    },
-    {
-      "host": "74.91.26.218:82",
-      "count": 16,
-      "kw_ratio": 1.0,
-      "song_ratio": 0.0,
       "blocked": false
     },
     {
@@ -226,6 +219,13 @@
       "blocked": false
     },
     {
+      "host": "live.264788.xyz",
+      "count": 13,
+      "kw_ratio": 0.8462,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "livestream-bt.nmtv.cn",
       "count": 13,
       "kw_ratio": 0.6923,
@@ -240,9 +240,9 @@
       "blocked": false
     },
     {
-      "host": "jwcdnqx.hebyun.com.cn",
+      "host": "0472.org",
       "count": 11,
-      "kw_ratio": 0.7273,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -278,20 +278,6 @@
       "host": "live.nbs.cn",
       "count": 10,
       "kw_ratio": 0.5,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.264788.xyz",
-      "count": 10,
-      "kw_ratio": 0.8,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "0472.org",
-      "count": 10,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -348,6 +334,20 @@
       "host": "123.146.162.24:8017",
       "count": 9,
       "kw_ratio": 0.4444,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "live.appwuhan.com",
+      "count": 9,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "ksdlive.gwpd.iqilu.com",
+      "count": 9,
+      "kw_ratio": 0.5556,
       "song_ratio": 0.0,
       "blocked": false
     }
