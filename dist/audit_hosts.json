@@ -45,8 +45,8 @@
     },
     {
       "host": "l.cztvcloud.com",
-      "count": 95,
-      "kw_ratio": 0.7053,
+      "count": 97,
+      "kw_ratio": 0.701,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -87,8 +87,8 @@
     },
     {
       "host": "ali-m-l.cztv.com",
-      "count": 46,
-      "kw_ratio": 0.587,
+      "count": 45,
+      "kw_ratio": 0.6,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -163,17 +163,17 @@
       "blocked": false
     },
     {
-      "host": "74.91.26.218:82",
-      "count": 18,
-      "kw_ratio": 1.0,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "35848.hlsplay.aodianyun.com",
       "count": 17,
       "kw_ratio": 0.1176,
       "song_ratio": 0.2941,
+      "blocked": false
+    },
+    {
+      "host": "74.91.26.218:82",
+      "count": 17,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
       "blocked": false
     },
     {
