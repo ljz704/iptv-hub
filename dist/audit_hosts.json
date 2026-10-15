@@ -46,7 +46,7 @@
     {
       "host": "l.cztvcloud.com",
       "count": 96,
-      "kw_ratio": 0.7083,
+      "kw_ratio": 0.6979,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -87,8 +87,8 @@
     },
     {
       "host": "ali-m-l.cztv.com",
-      "count": 45,
-      "kw_ratio": 0.5778,
+      "count": 44,
+      "kw_ratio": 0.5909,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -163,17 +163,17 @@
       "blocked": false
     },
     {
-      "host": "74.91.26.218:82",
-      "count": 18,
-      "kw_ratio": 1.0,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "35848.hlsplay.aodianyun.com",
       "count": 17,
       "kw_ratio": 0.1176,
       "song_ratio": 0.2941,
+      "blocked": false
+    },
+    {
+      "host": "74.91.26.218:82",
+      "count": 17,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
       "blocked": false
     },
     {
@@ -191,6 +191,13 @@
       "blocked": false
     },
     {
+      "host": "live.zohi.tv",
+      "count": 14,
+      "kw_ratio": 0.8571,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "123.163.119.21:9601",
       "count": 14,
       "kw_ratio": 0.5,
@@ -205,23 +212,9 @@
       "blocked": false
     },
     {
-      "host": "live.zohi.tv",
-      "count": 13,
-      "kw_ratio": 0.8462,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "weblive.hebtv.com",
       "count": 13,
       "kw_ratio": 0.6154,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.264788.xyz",
-      "count": 13,
-      "kw_ratio": 0.8462,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -236,6 +229,20 @@
       "host": "stream2.xiancity.cn",
       "count": 11,
       "kw_ratio": 0.5455,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "live.264788.xyz",
+      "count": 11,
+      "kw_ratio": 0.8182,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "0472.org",
+      "count": 11,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -271,13 +278,6 @@
       "host": "live.nbs.cn",
       "count": 10,
       "kw_ratio": 0.5,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "0472.org",
-      "count": 10,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
