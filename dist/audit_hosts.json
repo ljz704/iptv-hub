@@ -45,15 +45,15 @@
     },
     {
       "host": "l.cztvcloud.com",
-      "count": 96,
-      "kw_ratio": 0.6979,
+      "count": 95,
+      "kw_ratio": 0.7053,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
       "host": "gcalic.v.myalicdn.com",
-      "count": 76,
-      "kw_ratio": 0.0263,
+      "count": 77,
+      "kw_ratio": 0.026,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -65,16 +65,16 @@
       "blocked": false
     },
     {
-      "host": "[2409:8087:8:21::18]:6610",
-      "count": 55,
-      "kw_ratio": 1.0,
+      "host": "live.metshop.top",
+      "count": 66,
+      "kw_ratio": 0.5758,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "live.metshop.top",
-      "count": 49,
-      "kw_ratio": 0.4286,
+      "host": "[2409:8087:8:21::18]:6610",
+      "count": 55,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -219,13 +219,6 @@
       "blocked": false
     },
     {
-      "host": "live.264788.xyz",
-      "count": 13,
-      "kw_ratio": 0.8462,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "livestream-bt.nmtv.cn",
       "count": 13,
       "kw_ratio": 0.6923,
@@ -233,9 +226,23 @@
       "blocked": false
     },
     {
+      "host": "101.66.195.192:9901",
+      "count": 12,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "stream2.xiancity.cn",
       "count": 11,
       "kw_ratio": 0.5455,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "live.264788.xyz",
+      "count": 11,
+      "kw_ratio": 0.8182,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -341,13 +348,6 @@
       "host": "123.146.162.24:8017",
       "count": 9,
       "kw_ratio": 0.4444,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.appwuhan.com",
-      "count": 9,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     }
