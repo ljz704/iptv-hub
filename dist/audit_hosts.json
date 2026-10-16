@@ -45,15 +45,15 @@
     },
     {
       "host": "l.cztvcloud.com",
-      "count": 95,
-      "kw_ratio": 0.7053,
+      "count": 97,
+      "kw_ratio": 0.701,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
       "host": "gcalic.v.myalicdn.com",
-      "count": 77,
-      "kw_ratio": 0.026,
+      "count": 76,
+      "kw_ratio": 0.0263,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -65,16 +65,16 @@
       "blocked": false
     },
     {
-      "host": "live.metshop.top",
-      "count": 66,
-      "kw_ratio": 0.5758,
+      "host": "[2409:8087:8:21::18]:6610",
+      "count": 55,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "[2409:8087:8:21::18]:6610",
-      "count": 55,
-      "kw_ratio": 1.0,
+      "host": "live.metshop.top",
+      "count": 49,
+      "kw_ratio": 0.4286,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -87,8 +87,8 @@
     },
     {
       "host": "ali-m-l.cztv.com",
-      "count": 43,
-      "kw_ratio": 0.5814,
+      "count": 44,
+      "kw_ratio": 0.5909,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -240,6 +240,13 @@
       "blocked": false
     },
     {
+      "host": "0472.org",
+      "count": 11,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "stream.rcs.revma.com",
       "count": 11,
       "kw_ratio": 0.7273,
@@ -271,20 +278,6 @@
       "host": "live.nbs.cn",
       "count": 10,
       "kw_ratio": 0.5,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "125.125.236.31:9901",
-      "count": 10,
-      "kw_ratio": 1.0,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "0472.org",
-      "count": 10,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -345,9 +338,16 @@
       "blocked": false
     },
     {
-      "host": "123.146.162.24:8017",
+      "host": "live.appwuhan.com",
       "count": 9,
-      "kw_ratio": 0.4444,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "ksdlive.gwpd.iqilu.com",
+      "count": 9,
+      "kw_ratio": 0.5556,
       "song_ratio": 0.0,
       "blocked": false
     }
