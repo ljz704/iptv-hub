@@ -52,8 +52,8 @@
     },
     {
       "host": "gcalic.v.myalicdn.com",
-      "count": 76,
-      "kw_ratio": 0.0263,
+      "count": 77,
+      "kw_ratio": 0.026,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -79,16 +79,16 @@
       "blocked": false
     },
     {
-      "host": "ali-m-l.cztv.com",
+      "host": "39.134.67.108",
       "count": 47,
-      "kw_ratio": 0.5957,
+      "kw_ratio": 0.9149,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "39.134.67.108",
-      "count": 47,
-      "kw_ratio": 0.9149,
+      "host": "ali-m-l.cztv.com",
+      "count": 43,
+      "kw_ratio": 0.5814,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -219,16 +219,16 @@
       "blocked": false
     },
     {
-      "host": "livestream-bt.nmtv.cn",
+      "host": "live.264788.xyz",
       "count": 13,
-      "kw_ratio": 0.6923,
+      "kw_ratio": 0.8462,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "live.264788.xyz",
-      "count": 12,
-      "kw_ratio": 0.8333,
+      "host": "livestream-bt.nmtv.cn",
+      "count": 13,
+      "kw_ratio": 0.6923,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -271,6 +271,13 @@
       "host": "live.nbs.cn",
       "count": 10,
       "kw_ratio": 0.5,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "125.125.236.31:9901",
+      "count": 10,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -341,13 +348,6 @@
       "host": "123.146.162.24:8017",
       "count": 9,
       "kw_ratio": 0.4444,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.appwuhan.com",
-      "count": 9,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     }
