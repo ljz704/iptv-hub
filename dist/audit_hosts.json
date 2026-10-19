@@ -17,9 +17,9 @@
     },
     {
       "host": "ls.qingting.fm",
-      "count": 364,
-      "kw_ratio": 0.7775,
-      "song_ratio": 0.0027,
+      "count": 363,
+      "kw_ratio": 0.7796,
+      "song_ratio": 0.0028,
       "blocked": false
     },
     {
@@ -45,8 +45,8 @@
     },
     {
       "host": "l.cztvcloud.com",
-      "count": 96,
-      "kw_ratio": 0.7083,
+      "count": 95,
+      "kw_ratio": 0.7053,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -66,8 +66,8 @@
     },
     {
       "host": "live.metshop.top",
-      "count": 66,
-      "kw_ratio": 0.5758,
+      "count": 65,
+      "kw_ratio": 0.5846,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -184,13 +184,6 @@
       "blocked": false
     },
     {
-      "host": "live.zohi.tv",
-      "count": 14,
-      "kw_ratio": 0.8571,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "123.163.119.21:9601",
       "count": 14,
       "kw_ratio": 0.5,
@@ -212,6 +205,13 @@
       "blocked": false
     },
     {
+      "host": "live.zohi.tv",
+      "count": 13,
+      "kw_ratio": 0.8462,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "weblive.hebtv.com",
       "count": 13,
       "kw_ratio": 0.6154,
@@ -219,16 +219,16 @@
       "blocked": false
     },
     {
-      "host": "live.264788.xyz",
+      "host": "livestream-bt.nmtv.cn",
       "count": 13,
-      "kw_ratio": 0.8462,
+      "kw_ratio": 0.6923,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "livestream-bt.nmtv.cn",
-      "count": 13,
-      "kw_ratio": 0.6923,
+      "host": "live.264788.xyz",
+      "count": 12,
+      "kw_ratio": 0.8333,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -243,6 +243,13 @@
       "host": "0472.org",
       "count": 11,
       "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "jwcdnqx.hebyun.com.cn",
+      "count": 11,
+      "kw_ratio": 0.7273,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -278,13 +285,6 @@
       "host": "live.nbs.cn",
       "count": 10,
       "kw_ratio": 0.5,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "jwcdnqx.hebyun.com.cn",
-      "count": 10,
-      "kw_ratio": 0.8,
       "song_ratio": 0.0,
       "blocked": false
     },
