@@ -52,8 +52,8 @@
     },
     {
       "host": "gcalic.v.myalicdn.com",
-      "count": 76,
-      "kw_ratio": 0.0263,
+      "count": 77,
+      "kw_ratio": 0.026,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -61,6 +61,13 @@
       "host": "ivi.bupt.edu.cn",
       "count": 73,
       "kw_ratio": 0.9589,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "live.metshop.top",
+      "count": 66,
+      "kw_ratio": 0.5758,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -81,7 +88,7 @@
     {
       "host": "ali-m-l.cztv.com",
       "count": 45,
-      "kw_ratio": 0.5778,
+      "kw_ratio": 0.6,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -177,13 +184,6 @@
       "blocked": false
     },
     {
-      "host": "live.zohi.tv",
-      "count": 14,
-      "kw_ratio": 0.8571,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "123.163.119.21:9601",
       "count": 14,
       "kw_ratio": 0.5,
@@ -205,16 +205,16 @@
       "blocked": false
     },
     {
-      "host": "weblive.hebtv.com",
+      "host": "live.zohi.tv",
       "count": 13,
-      "kw_ratio": 0.6154,
+      "kw_ratio": 0.8462,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "live.264788.xyz",
+      "host": "weblive.hebtv.com",
       "count": 13,
-      "kw_ratio": 0.8462,
+      "kw_ratio": 0.6154,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -226,16 +226,16 @@
       "blocked": false
     },
     {
-      "host": "stream2.xiancity.cn",
-      "count": 11,
-      "kw_ratio": 0.5455,
+      "host": "live.264788.xyz",
+      "count": 12,
+      "kw_ratio": 0.8333,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "0472.org",
+      "host": "stream2.xiancity.cn",
       "count": 11,
-      "kw_ratio": 1.0,
+      "kw_ratio": 0.5455,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -271,6 +271,13 @@
       "host": "live.nbs.cn",
       "count": 10,
       "kw_ratio": 0.5,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "0472.org",
+      "count": 10,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -341,13 +348,6 @@
       "host": "live.appwuhan.com",
       "count": 9,
       "kw_ratio": 1.0,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "ksdlive.gwpd.iqilu.com",
-      "count": 9,
-      "kw_ratio": 0.5556,
       "song_ratio": 0.0,
       "blocked": false
     }
