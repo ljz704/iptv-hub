@@ -1,5 +1,7 @@
 {
-  "blacklist": [],
+  "blacklist": [
+    "gcalic.v.myalicdn.com"
+  ],
   "top_hosts": [
     {
       "host": "radio.0472.org",
@@ -51,18 +53,18 @@
       "blocked": false
     },
     {
-      "host": "gcalic.v.myalicdn.com",
-      "count": 76,
-      "kw_ratio": 0.0263,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "ivi.bupt.edu.cn",
       "count": 73,
       "kw_ratio": 0.9589,
       "song_ratio": 0.0,
       "blocked": false
+    },
+    {
+      "host": "gcalic.v.myalicdn.com",
+      "count": 63,
+      "kw_ratio": 0.0159,
+      "song_ratio": 0.0,
+      "blocked": true
     },
     {
       "host": "[2409:8087:8:21::18]:6610",
@@ -87,8 +89,8 @@
     },
     {
       "host": "ali-m-l.cztv.com",
-      "count": 45,
-      "kw_ratio": 0.5778,
+      "count": 46,
+      "kw_ratio": 0.587,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -219,13 +221,6 @@
       "blocked": false
     },
     {
-      "host": "live.264788.xyz",
-      "count": 13,
-      "kw_ratio": 0.8462,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "livestream-bt.nmtv.cn",
       "count": 13,
       "kw_ratio": 0.6923,
@@ -348,6 +343,13 @@
       "host": "live.appwuhan.com",
       "count": 9,
       "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "ksdlive.gwpd.iqilu.com",
+      "count": 9,
+      "kw_ratio": 0.5556,
       "song_ratio": 0.0,
       "blocked": false
     }
