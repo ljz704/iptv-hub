@@ -17,9 +17,9 @@
     },
     {
       "host": "ls.qingting.fm",
-      "count": 363,
-      "kw_ratio": 0.7796,
-      "song_ratio": 0.0028,
+      "count": 364,
+      "kw_ratio": 0.7775,
+      "song_ratio": 0.0027,
       "blocked": false
     },
     {
@@ -46,7 +46,7 @@
     {
       "host": "l.cztvcloud.com",
       "count": 96,
-      "kw_ratio": 0.7083,
+      "kw_ratio": 0.6979,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -72,16 +72,16 @@
       "blocked": false
     },
     {
-      "host": "ali-m-l.cztv.com",
+      "host": "39.134.67.108",
       "count": 47,
-      "kw_ratio": 0.5957,
+      "kw_ratio": 0.9149,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "39.134.67.108",
-      "count": 47,
-      "kw_ratio": 0.9149,
+      "host": "ali-m-l.cztv.com",
+      "count": 45,
+      "kw_ratio": 0.6,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -233,20 +233,6 @@
       "blocked": false
     },
     {
-      "host": "0472.org",
-      "count": 11,
-      "kw_ratio": 1.0,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "jwcdnqx.hebyun.com.cn",
-      "count": 11,
-      "kw_ratio": 0.7273,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "stream.rcs.revma.com",
       "count": 11,
       "kw_ratio": 0.7273,
@@ -257,6 +243,13 @@
       "host": "live.cjyun.org",
       "count": 10,
       "kw_ratio": 0.5,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "live.ahsz.tv",
+      "count": 10,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -278,6 +271,20 @@
       "host": "live.nbs.cn",
       "count": 10,
       "kw_ratio": 0.5,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "0472.org",
+      "count": 10,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "jwcdnqx.hebyun.com.cn",
+      "count": 10,
+      "kw_ratio": 0.8,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -320,13 +327,6 @@
       "host": "lzlive.vojs.cn",
       "count": 10,
       "kw_ratio": 0.9,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.ahsz.tv",
-      "count": 9,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
