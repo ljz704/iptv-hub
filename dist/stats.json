@@ -1,23 +1,23 @@
 {
-  "timestamp": "2026-10-30T12:26:07.350474+00:00",
+  "timestamp": "2026-10-30T22:05:36.279080+00:00",
   "total": 2191,
-  "alive": 365,
-  "alive_ratio": 0.1666,
+  "alive": 334,
+  "alive_ratio": 0.1524,
   "per_upstream": {
     "imdazui-tvlist": {
       "raw": 1004,
       "parsed": 1004,
-      "alive": 30
+      "alive": 26
     },
     "vbskycn-iptv4": {
       "raw": 1312,
       "parsed": 308,
-      "alive": 221
+      "alive": 206
     },
     "iptv-org-cn": {
       "raw": 1824,
       "parsed": 512,
-      "alive": 80
+      "alive": 76
     },
     "yuechan-live": {
       "raw": 1920,
@@ -42,7 +42,7 @@
     "tvbox-gao": {
       "raw": 2025,
       "parsed": 3063,
-      "alive": 18
+      "alive": 10
     }
   },
   "threshold": 0.35,
