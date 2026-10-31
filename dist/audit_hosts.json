@@ -17,9 +17,9 @@
     },
     {
       "host": "ls.qingting.fm",
-      "count": 362,
-      "kw_ratio": 0.7762,
-      "song_ratio": 0.0028,
+      "count": 364,
+      "kw_ratio": 0.7775,
+      "song_ratio": 0.0027,
       "blocked": false
     },
     {
@@ -45,8 +45,15 @@
     },
     {
       "host": "l.cztvcloud.com",
-      "count": 88,
-      "kw_ratio": 0.7045,
+      "count": 96,
+      "kw_ratio": 0.6979,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "gcalic.v.myalicdn.com",
+      "count": 77,
+      "kw_ratio": 0.026,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -73,8 +80,8 @@
     },
     {
       "host": "ali-m-l.cztv.com",
-      "count": 46,
-      "kw_ratio": 0.587,
+      "count": 45,
+      "kw_ratio": 0.6,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -170,13 +177,6 @@
       "blocked": false
     },
     {
-      "host": "live.zohi.tv",
-      "count": 14,
-      "kw_ratio": 0.8571,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "123.163.119.21:9601",
       "count": 14,
       "kw_ratio": 0.5,
@@ -198,16 +198,16 @@
       "blocked": false
     },
     {
-      "host": "weblive.hebtv.com",
+      "host": "live.zohi.tv",
       "count": 13,
-      "kw_ratio": 0.6154,
+      "kw_ratio": 0.8462,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "live.264788.xyz",
+      "host": "weblive.hebtv.com",
       "count": 13,
-      "kw_ratio": 0.8462,
+      "kw_ratio": 0.6154,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -271,6 +271,13 @@
       "host": "jwcdnqx.hebyun.com.cn",
       "count": 10,
       "kw_ratio": 0.8,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "stream5.jlntv.cn",
+      "count": 10,
+      "kw_ratio": 0.3,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -341,13 +348,6 @@
       "host": "video.dztv.tv:1935",
       "count": 9,
       "kw_ratio": 1.0,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.xtgdw.cn:1935",
-      "count": 9,
-      "kw_ratio": 0.6667,
       "song_ratio": 0.0,
       "blocked": false
     }
