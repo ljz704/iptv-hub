@@ -45,8 +45,8 @@
     },
     {
       "host": "l.cztvcloud.com",
-      "count": 96,
-      "kw_ratio": 0.6979,
+      "count": 97,
+      "kw_ratio": 0.701,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -163,8 +163,8 @@
       "blocked": false
     },
     {
-      "host": "115.48.161.74:9901",
-      "count": 16,
+      "host": "live.metshop.top",
+      "count": 17,
       "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
@@ -219,6 +219,13 @@
       "blocked": false
     },
     {
+      "host": "live.264788.xyz",
+      "count": 13,
+      "kw_ratio": 0.8462,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "livestream-bt.nmtv.cn",
       "count": 13,
       "kw_ratio": 0.6923,
@@ -243,13 +250,6 @@
       "host": "live.cjyun.org",
       "count": 10,
       "kw_ratio": 0.5,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.ahsz.tv",
-      "count": 10,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -331,6 +331,13 @@
       "blocked": false
     },
     {
+      "host": "live.ahsz.tv",
+      "count": 9,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "123.146.162.24:8017",
       "count": 9,
       "kw_ratio": 0.4444,
@@ -341,13 +348,6 @@
       "host": "live.appwuhan.com",
       "count": 9,
       "kw_ratio": 1.0,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "ksdlive.gwpd.iqilu.com",
-      "count": 9,
-      "kw_ratio": 0.5556,
       "song_ratio": 0.0,
       "blocked": false
     }
