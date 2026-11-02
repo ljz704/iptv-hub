@@ -163,6 +163,13 @@
       "blocked": false
     },
     {
+      "host": "115.48.161.74:9901",
+      "count": 16,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "stream.hndt.com",
       "count": 16,
       "kw_ratio": 0.75,
@@ -174,6 +181,13 @@
       "count": 15,
       "kw_ratio": 0.9333,
       "song_ratio": 0.0667,
+      "blocked": false
+    },
+    {
+      "host": "live.zohi.tv",
+      "count": 14,
+      "kw_ratio": 0.8571,
+      "song_ratio": 0.0,
       "blocked": false
     },
     {
@@ -198,23 +212,9 @@
       "blocked": false
     },
     {
-      "host": "live.zohi.tv",
-      "count": 13,
-      "kw_ratio": 0.8462,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "weblive.hebtv.com",
       "count": 13,
       "kw_ratio": 0.6154,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.264788.xyz",
-      "count": 13,
-      "kw_ratio": 0.8462,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -233,13 +233,6 @@
       "blocked": false
     },
     {
-      "host": "0472.org",
-      "count": 11,
-      "kw_ratio": 1.0,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "stream.rcs.revma.com",
       "count": 11,
       "kw_ratio": 0.7273,
@@ -250,6 +243,13 @@
       "host": "live.cjyun.org",
       "count": 10,
       "kw_ratio": 0.5,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "live.ahsz.tv",
+      "count": 10,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -271,6 +271,13 @@
       "host": "live.nbs.cn",
       "count": 10,
       "kw_ratio": 0.5,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "0472.org",
+      "count": 10,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -320,13 +327,6 @@
       "host": "lzlive.vojs.cn",
       "count": 10,
       "kw_ratio": 0.9,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.ahsz.tv",
-      "count": 9,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
