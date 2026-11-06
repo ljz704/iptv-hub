@@ -17,16 +17,16 @@
     },
     {
       "host": "ls.qingting.fm",
-      "count": 363,
-      "kw_ratio": 0.7796,
+      "count": 362,
+      "kw_ratio": 0.7762,
       "song_ratio": 0.0028,
       "blocked": false
     },
     {
       "host": "satellitepull.cnr.cn",
-      "count": 259,
-      "kw_ratio": 0.8996,
-      "song_ratio": 0.0193,
+      "count": 258,
+      "kw_ratio": 0.8992,
+      "song_ratio": 0.0194,
       "blocked": false
     },
     {
@@ -45,8 +45,8 @@
     },
     {
       "host": "l.cztvcloud.com",
-      "count": 95,
-      "kw_ratio": 0.7053,
+      "count": 97,
+      "kw_ratio": 0.701,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -54,13 +54,6 @@
       "host": "ivi.bupt.edu.cn",
       "count": 73,
       "kw_ratio": 0.9589,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.metshop.top",
-      "count": 66,
-      "kw_ratio": 0.5758,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -79,16 +72,16 @@
       "blocked": false
     },
     {
-      "host": "ali-m-l.cztv.com",
-      "count": 46,
-      "kw_ratio": 0.587,
+      "host": "[2409:8087:1a01:df::7005]:80",
+      "count": 42,
+      "kw_ratio": 0.8571,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "[2409:8087:1a01:df::7005]:80",
-      "count": 42,
-      "kw_ratio": 0.8571,
+      "host": "ali-m-l.cztv.com",
+      "count": 41,
+      "kw_ratio": 0.5366,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -177,13 +170,6 @@
       "blocked": false
     },
     {
-      "host": "live.zohi.tv",
-      "count": 14,
-      "kw_ratio": 0.8571,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "123.163.119.21:9601",
       "count": 14,
       "kw_ratio": 0.5,
@@ -212,16 +198,16 @@
       "blocked": false
     },
     {
-      "host": "live.264788.xyz",
+      "host": "livestream-bt.nmtv.cn",
       "count": 13,
-      "kw_ratio": 0.8462,
+      "kw_ratio": 0.6923,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "livestream-bt.nmtv.cn",
-      "count": 13,
-      "kw_ratio": 0.6923,
+      "host": "live.zohi.tv",
+      "count": 11,
+      "kw_ratio": 0.8182,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -233,9 +219,9 @@
       "blocked": false
     },
     {
-      "host": "jwcdnqx.hebyun.com.cn",
+      "host": "0472.org",
       "count": 11,
-      "kw_ratio": 0.7273,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -271,13 +257,6 @@
       "host": "live.nbs.cn",
       "count": 10,
       "kw_ratio": 0.5,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "0472.org",
-      "count": 10,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -348,6 +327,27 @@
       "host": "video.dztv.tv:1935",
       "count": 9,
       "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "live.xtgdw.cn:1935",
+      "count": 9,
+      "kw_ratio": 0.6667,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "jwcdnqx.hebyun.com.cn",
+      "count": 9,
+      "kw_ratio": 0.7778,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "live.shaoxing.com.cn",
+      "count": 9,
+      "kw_ratio": 0.8889,
       "song_ratio": 0.0,
       "blocked": false
     }
