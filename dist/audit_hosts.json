@@ -45,8 +45,8 @@
     },
     {
       "host": "l.cztvcloud.com",
-      "count": 95,
-      "kw_ratio": 0.7053,
+      "count": 96,
+      "kw_ratio": 0.7083,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -80,8 +80,8 @@
     },
     {
       "host": "ali-m-l.cztv.com",
-      "count": 46,
-      "kw_ratio": 0.587,
+      "count": 45,
+      "kw_ratio": 0.5778,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -212,6 +212,13 @@
       "blocked": false
     },
     {
+      "host": "live.264788.xyz",
+      "count": 13,
+      "kw_ratio": 0.8462,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "livestream-bt.nmtv.cn",
       "count": 13,
       "kw_ratio": 0.6923,
@@ -275,6 +282,13 @@
       "blocked": false
     },
     {
+      "host": "stream5.jlntv.cn",
+      "count": 10,
+      "kw_ratio": 0.3,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "117.156.28.119",
       "count": 10,
       "kw_ratio": 1.0,
@@ -334,20 +348,6 @@
       "host": "ksdlive.gwpd.iqilu.com",
       "count": 9,
       "kw_ratio": 0.5556,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "video.dztv.tv:1935",
-      "count": 9,
-      "kw_ratio": 1.0,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.xtgdw.cn:1935",
-      "count": 9,
-      "kw_ratio": 0.6667,
       "song_ratio": 0.0,
       "blocked": false
     }
