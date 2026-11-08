@@ -17,9 +17,9 @@
     },
     {
       "host": "ls.qingting.fm",
-      "count": 364,
-      "kw_ratio": 0.7775,
-      "song_ratio": 0.0027,
+      "count": 362,
+      "kw_ratio": 0.7762,
+      "song_ratio": 0.0028,
       "blocked": false
     },
     {
@@ -45,8 +45,8 @@
     },
     {
       "host": "l.cztvcloud.com",
-      "count": 96,
-      "kw_ratio": 0.6979,
+      "count": 88,
+      "kw_ratio": 0.7045,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -58,16 +58,16 @@
       "blocked": false
     },
     {
-      "host": "live.metshop.top",
-      "count": 66,
-      "kw_ratio": 0.5758,
+      "host": "[2409:8087:8:21::18]:6610",
+      "count": 55,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "[2409:8087:8:21::18]:6610",
-      "count": 55,
-      "kw_ratio": 1.0,
+      "host": "live.metshop.top",
+      "count": 49,
+      "kw_ratio": 0.4286,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -80,8 +80,8 @@
     },
     {
       "host": "ali-m-l.cztv.com",
-      "count": 43,
-      "kw_ratio": 0.5814,
+      "count": 44,
+      "kw_ratio": 0.5682,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -177,13 +177,6 @@
       "blocked": false
     },
     {
-      "host": "live.zohi.tv",
-      "count": 14,
-      "kw_ratio": 0.8571,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "123.163.119.21:9601",
       "count": 14,
       "kw_ratio": 0.5,
@@ -201,6 +194,13 @@
       "host": "223.110.245.139",
       "count": 14,
       "kw_ratio": 0.7143,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "live.zohi.tv",
+      "count": 13,
+      "kw_ratio": 0.8462,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -275,13 +275,6 @@
       "blocked": false
     },
     {
-      "host": "stream5.jlntv.cn",
-      "count": 10,
-      "kw_ratio": 0.3,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "117.156.28.119",
       "count": 10,
       "kw_ratio": 1.0,
@@ -348,6 +341,13 @@
       "host": "video.dztv.tv:1935",
       "count": 9,
       "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "live.xtgdw.cn:1935",
+      "count": 9,
+      "kw_ratio": 0.6667,
       "song_ratio": 0.0,
       "blocked": false
     }
