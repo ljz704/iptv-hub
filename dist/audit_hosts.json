@@ -17,9 +17,9 @@
     },
     {
       "host": "ls.qingting.fm",
-      "count": 362,
-      "kw_ratio": 0.7762,
-      "song_ratio": 0.0028,
+      "count": 364,
+      "kw_ratio": 0.7775,
+      "song_ratio": 0.0027,
       "blocked": false
     },
     {
@@ -59,8 +59,8 @@
     },
     {
       "host": "live.metshop.top",
-      "count": 65,
-      "kw_ratio": 0.5692,
+      "count": 66,
+      "kw_ratio": 0.5758,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -79,16 +79,16 @@
       "blocked": false
     },
     {
-      "host": "[2409:8087:1a01:df::7005]:80",
-      "count": 42,
-      "kw_ratio": 0.8571,
+      "host": "ali-m-l.cztv.com",
+      "count": 44,
+      "kw_ratio": 0.5909,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "ali-m-l.cztv.com",
-      "count": 41,
-      "kw_ratio": 0.5854,
+      "host": "[2409:8087:1a01:df::7005]:80",
+      "count": 42,
+      "kw_ratio": 0.8571,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -177,6 +177,13 @@
       "blocked": false
     },
     {
+      "host": "live.zohi.tv",
+      "count": 14,
+      "kw_ratio": 0.8571,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "123.163.119.21:9601",
       "count": 14,
       "kw_ratio": 0.5,
@@ -194,13 +201,6 @@
       "host": "223.110.245.139",
       "count": 14,
       "kw_ratio": 0.7143,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.zohi.tv",
-      "count": 13,
-      "kw_ratio": 0.8462,
       "song_ratio": 0.0,
       "blocked": false
     },
