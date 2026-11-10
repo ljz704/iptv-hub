@@ -17,9 +17,9 @@
     },
     {
       "host": "ls.qingting.fm",
-      "count": 364,
-      "kw_ratio": 0.7775,
-      "song_ratio": 0.0027,
+      "count": 362,
+      "kw_ratio": 0.7762,
+      "song_ratio": 0.0028,
       "blocked": false
     },
     {
@@ -45,8 +45,8 @@
     },
     {
       "host": "l.cztvcloud.com",
-      "count": 97,
-      "kw_ratio": 0.701,
+      "count": 96,
+      "kw_ratio": 0.6979,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -59,8 +59,8 @@
     },
     {
       "host": "live.metshop.top",
-      "count": 66,
-      "kw_ratio": 0.5758,
+      "count": 65,
+      "kw_ratio": 0.5692,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -79,16 +79,16 @@
       "blocked": false
     },
     {
-      "host": "ali-m-l.cztv.com",
-      "count": 45,
-      "kw_ratio": 0.6,
+      "host": "[2409:8087:1a01:df::7005]:80",
+      "count": 42,
+      "kw_ratio": 0.8571,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "[2409:8087:1a01:df::7005]:80",
-      "count": 42,
-      "kw_ratio": 0.8571,
+      "host": "ali-m-l.cztv.com",
+      "count": 41,
+      "kw_ratio": 0.5854,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -233,13 +233,6 @@
       "blocked": false
     },
     {
-      "host": "0472.org",
-      "count": 11,
-      "kw_ratio": 1.0,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "stream.rcs.revma.com",
       "count": 11,
       "kw_ratio": 0.7273,
@@ -271,6 +264,13 @@
       "host": "live.nbs.cn",
       "count": 10,
       "kw_ratio": 0.5,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "jwcdnqx.hebyun.com.cn",
+      "count": 10,
+      "kw_ratio": 0.8,
       "song_ratio": 0.0,
       "blocked": false
     },
