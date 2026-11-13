@@ -79,16 +79,16 @@
       "blocked": false
     },
     {
-      "host": "ali-m-l.cztv.com",
-      "count": 45,
-      "kw_ratio": 0.6,
+      "host": "[2409:8087:1a01:df::7005]:80",
+      "count": 42,
+      "kw_ratio": 0.8571,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "[2409:8087:1a01:df::7005]:80",
-      "count": 42,
-      "kw_ratio": 0.8571,
+      "host": "ali-m-l.cztv.com",
+      "count": 40,
+      "kw_ratio": 0.575,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -233,6 +233,13 @@
       "blocked": false
     },
     {
+      "host": "0472.org",
+      "count": 11,
+      "kw_ratio": 1.0,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "stream.rcs.revma.com",
       "count": 11,
       "kw_ratio": 0.7273,
@@ -264,13 +271,6 @@
       "host": "live.nbs.cn",
       "count": 10,
       "kw_ratio": 0.5,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "0472.org",
-      "count": 10,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
