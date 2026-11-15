@@ -80,8 +80,8 @@
     },
     {
       "host": "ali-m-l.cztv.com",
-      "count": 46,
-      "kw_ratio": 0.587,
+      "count": 44,
+      "kw_ratio": 0.5682,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -233,13 +233,6 @@
       "blocked": false
     },
     {
-      "host": "0472.org",
-      "count": 11,
-      "kw_ratio": 1.0,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "stream.rcs.revma.com",
       "count": 11,
       "kw_ratio": 0.7273,
@@ -275,16 +268,16 @@
       "blocked": false
     },
     {
-      "host": "jwcdnqx.hebyun.com.cn",
+      "host": "0472.org",
       "count": 10,
-      "kw_ratio": 0.8,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "stream5.jlntv.cn",
+      "host": "jwcdnqx.hebyun.com.cn",
       "count": 10,
-      "kw_ratio": 0.3,
+      "kw_ratio": 0.8,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -348,6 +341,13 @@
       "host": "ksdlive.gwpd.iqilu.com",
       "count": 9,
       "kw_ratio": 0.5556,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "video.dztv.tv:1935",
+      "count": 9,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     }
