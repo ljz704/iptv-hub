@@ -17,9 +17,9 @@
     },
     {
       "host": "ls.qingting.fm",
-      "count": 362,
-      "kw_ratio": 0.7762,
-      "song_ratio": 0.0028,
+      "count": 364,
+      "kw_ratio": 0.7775,
+      "song_ratio": 0.0027,
       "blocked": false
     },
     {
@@ -80,8 +80,8 @@
     },
     {
       "host": "ali-m-l.cztv.com",
-      "count": 44,
-      "kw_ratio": 0.5909,
+      "count": 45,
+      "kw_ratio": 0.6,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -103,13 +103,6 @@
       "host": "live.streamingfast.net",
       "count": 32,
       "kw_ratio": 0.0938,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "120.76.248.139",
-      "count": 32,
-      "kw_ratio": 0.75,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -184,6 +177,13 @@
       "blocked": false
     },
     {
+      "host": "live.zohi.tv",
+      "count": 14,
+      "kw_ratio": 0.8571,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "123.163.119.21:9601",
       "count": 14,
       "kw_ratio": 0.5,
@@ -205,13 +205,6 @@
       "blocked": false
     },
     {
-      "host": "live.zohi.tv",
-      "count": 13,
-      "kw_ratio": 0.8462,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
       "host": "weblive.hebtv.com",
       "count": 13,
       "kw_ratio": 0.6154,
@@ -219,16 +212,16 @@
       "blocked": false
     },
     {
-      "host": "livestream-bt.nmtv.cn",
+      "host": "live.264788.xyz",
       "count": 13,
-      "kw_ratio": 0.6923,
+      "kw_ratio": 0.8462,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "live.264788.xyz",
-      "count": 12,
-      "kw_ratio": 0.8333,
+      "host": "livestream-bt.nmtv.cn",
+      "count": 13,
+      "kw_ratio": 0.6923,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -271,6 +264,13 @@
       "host": "live.nbs.cn",
       "count": 10,
       "kw_ratio": 0.5,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "0472.org",
+      "count": 10,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
