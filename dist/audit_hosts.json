@@ -45,8 +45,8 @@
     },
     {
       "host": "l.cztvcloud.com",
-      "count": 96,
-      "kw_ratio": 0.6979,
+      "count": 97,
+      "kw_ratio": 0.701,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -81,7 +81,7 @@
     {
       "host": "ali-m-l.cztv.com",
       "count": 44,
-      "kw_ratio": 0.5909,
+      "kw_ratio": 0.6136,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -184,6 +184,13 @@
       "blocked": false
     },
     {
+      "host": "live.264788.xyz",
+      "count": 14,
+      "kw_ratio": 0.8571,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
       "host": "74.91.26.218:82",
       "count": 14,
       "kw_ratio": 1.0,
@@ -208,13 +215,6 @@
       "host": "weblive.hebtv.com",
       "count": 13,
       "kw_ratio": 0.6154,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.264788.xyz",
-      "count": 13,
-      "kw_ratio": 0.8462,
       "song_ratio": 0.0,
       "blocked": false
     },
