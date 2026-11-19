@@ -45,8 +45,8 @@
     },
     {
       "host": "l.cztvcloud.com",
-      "count": 96,
-      "kw_ratio": 0.6979,
+      "count": 97,
+      "kw_ratio": 0.701,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -80,8 +80,8 @@
     },
     {
       "host": "ali-m-l.cztv.com",
-      "count": 42,
-      "kw_ratio": 0.5952,
+      "count": 44,
+      "kw_ratio": 0.5909,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -177,16 +177,16 @@
       "blocked": false
     },
     {
-      "host": "123.163.119.21:9601",
+      "host": "live.zohi.tv",
       "count": 14,
-      "kw_ratio": 0.5,
+      "kw_ratio": 0.8571,
       "song_ratio": 0.0,
       "blocked": false
     },
     {
-      "host": "live.264788.xyz",
+      "host": "123.163.119.21:9601",
       "count": 14,
-      "kw_ratio": 0.8571,
+      "kw_ratio": 0.5,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -201,13 +201,6 @@
       "host": "223.110.245.139",
       "count": 14,
       "kw_ratio": 0.7143,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "live.zohi.tv",
-      "count": 13,
-      "kw_ratio": 0.8462,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -229,6 +222,20 @@
       "host": "stream2.xiancity.cn",
       "count": 11,
       "kw_ratio": 0.5455,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "live.264788.xyz",
+      "count": 11,
+      "kw_ratio": 0.8182,
+      "song_ratio": 0.0,
+      "blocked": false
+    },
+    {
+      "host": "0472.org",
+      "count": 11,
+      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     },
@@ -341,13 +348,6 @@
       "host": "ksdlive.gwpd.iqilu.com",
       "count": 9,
       "kw_ratio": 0.5556,
-      "song_ratio": 0.0,
-      "blocked": false
-    },
-    {
-      "host": "video.dztv.tv:1935",
-      "count": 9,
-      "kw_ratio": 1.0,
       "song_ratio": 0.0,
       "blocked": false
     }
